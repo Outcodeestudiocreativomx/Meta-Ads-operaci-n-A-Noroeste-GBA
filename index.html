@@ -1,0 +1,2141 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía Operativa Meta Ads · Stellantis Obregón · Julio 2026</title>
+<meta name="description" content="Plan operativo de pauta digital julio 2026 — Stellantis Cd. Obregón · 4 líneas activas + 1 línea opcional de seguimiento · $17,000 MXN · Estrategia nativa Meta Ads por Outcode Estudio Creativo.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+
+/* ─────────────────────────────────────────
+ TOKENS Y BASE
+───────────────────────────────────────── */
+:root {
+  --ink: #1F1F1F;
+  --paper: #FAFAFA;
+  --smoke: #6B6B6B;
+  --mist: #E5E5E5;
+  --bone: #F3F3F3;
+  --rule: #D4D4D4;
+  --mustard: #C9A227;
+  --cobalt: #1E40AF;
+  --green: #166534;
+  --red: #B91C1C;
+  --purple: #6D28D9;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px; line-height: 1.55;
+  background: var(--paper); color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--mustard); color: var(--ink); }
+a { color: inherit; text-decoration: none; }
+ul, ol { padding-left: 1.3em; }
+li { margin: 5px 0; }
+
+/* ─────────────────────────────────────────
+ BARRA DE PROGRESO DE LECTURA
+───────────────────────────────────────── */
+.scroll-progress {
+  position: fixed; top: 0; left: 0; z-index: 100;
+  height: 3px; width: 0%; background: var(--mustard);
+  transition: width 0.1s linear;
+}
+
+/* ─────────────────────────────────────────
+ BARRA SUPERIOR FIJA
+───────────────────────────────────────── */
+.top-bar {
+  position: fixed; top: 3px; left: 0; right: 0; z-index: 60;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 32px;
+  background: rgba(250,250,250,0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--mist);
+}
+.top-bar .brand {
+  display: flex; align-items: center; gap: 14px;
+}
+.top-bar .brand .logotype {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--ink);
+}
+.top-bar .brand .divider {
+  width: 1px; height: 18px; background: var(--mist);
+}
+.top-bar .brand .client {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--smoke);
+}
+.top-bar .actions { display: flex; gap: 8px; align-items: center; }
+.top-bar .badge-live {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--green); border: 1px solid var(--green);
+  padding: 3px 10px; border-radius: 999px;
+  display: flex; align-items: center; gap: 5px;
+}
+.top-bar .badge-live::before {
+  content: ''; display: inline-block;
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--green);
+  animation: pulse-dot 1.8s ease-in-out infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.7); }
+}
+.top-bar .btn-wa {
+  background: var(--ink); color: var(--paper);
+  border: none; padding: 8px 16px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.75rem; font-weight: 600;
+  letter-spacing: 0.03em; text-transform: uppercase;
+  cursor: pointer; transition: background 0.2s;
+  text-decoration: none; display: inline-block;
+}
+.top-bar .btn-wa:hover { background: var(--mustard); color: var(--ink); }
+
+/* ─────────────────────────────────────────
+ MARQUEE
+───────────────────────────────────────── */
+.marquee-wrap {
+  background: var(--ink); overflow: hidden;
+  padding: 10px 0; border-bottom: 1px solid #333;
+  margin-top: 57px;
+}
+.marquee-track {
+  display: flex; gap: 0;
+  animation: marquee-scroll 28s linear infinite;
+  width: max-content;
+}
+.marquee-track span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: rgba(250,250,250,0.55);
+  padding: 0 28px; white-space: nowrap;
+}
+.marquee-track span.accent { color: var(--mustard); }
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ─────────────────────────────────────────
+ NAVEGACIÓN FLOTANTE (MENÚ ANCLA)
+───────────────────────────────────────── */
+.nav-float {
+  position: fixed; right: 20px; top: 50%; z-index: 50;
+  transform: translateY(-50%);
+  display: flex; flex-direction: column; gap: 6px;
+}
+.nav-float a {
+  display: flex; align-items: center; gap: 8px;
+  text-decoration: none;
+}
+.nav-float .dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--mist); border: 1.5px solid var(--rule);
+  transition: background 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+.nav-float a:hover .dot,
+.nav-float a.active .dot {
+  background: var(--mustard);
+  transform: scale(1.35);
+  border-color: var(--mustard);
+}
+.nav-float .dot-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--smoke);
+  opacity: 0; transform: translateX(4px);
+  transition: opacity 0.2s, transform 0.2s;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.nav-float a:hover .dot-label { opacity: 1; transform: translateX(0); }
+
+/* ─────────────────────────────────────────
+ REVEAL ANIMATION
+───────────────────────────────────────── */
+.reveal {
+  opacity: 0; transform: translateY(22px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ─────────────────────────────────────────
+ SECCIÓN HERO
+───────────────────────────────────────── */
+.hero {
+  padding: 80px 80px 72px;
+  border-bottom: 1px solid var(--mist);
+  position: relative;
+}
+.hero .eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.28em;
+  text-transform: uppercase; color: var(--mustard);
+  margin-bottom: 20px; display: block;
+}
+.hero h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 700; line-height: 0.96;
+  letter-spacing: -0.03em; margin-bottom: 20px;
+  color: var(--ink);
+}
+.hero h1 .accent { color: var(--mustard); }
+.hero .lead {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem; line-height: 1.55;
+  color: var(--smoke); max-width: 640px; margin-bottom: 32px;
+}
+.hero-kpis {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 1px; background: var(--mist);
+  border: 1px solid var(--mist);
+  max-width: 780px;
+}
+.hero-kpi {
+  background: var(--paper); padding: 18px 22px;
+}
+.hero-kpi .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.15em;
+  color: var(--smoke); text-transform: uppercase;
+}
+.hero-kpi .value {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem; font-weight: 700;
+  letter-spacing: -0.025em; color: var(--ink);
+  margin: 4px 0 2px; line-height: 1;
+}
+.hero-kpi .value.mustard { color: var(--mustard); }
+.hero-kpi .value.cobalt { color: var(--cobalt); }
+.hero-kpi .sub { font-size: 0.72rem; color: var(--smoke); }
+.hero-src {
+  position: absolute; bottom: 20px; right: 80px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.14em;
+  color: var(--smoke); opacity: 0.65;
+}
+.hero-src a { color: var(--mustard); }
+
+/* ─────────────────────────────────────────
+ SECCIONES GENERALES
+───────────────────────────────────────── */
+.section {
+  padding: 80px 80px;
+  border-bottom: 1px solid var(--mist);
+}
+.section-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px; letter-spacing: 0.28em;
+  text-transform: uppercase; color: var(--mustard);
+  display: block; margin-bottom: 8px;
+}
+.section-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 700; letter-spacing: -0.025em;
+  color: var(--ink); margin-bottom: 10px; line-height: 1.1;
+}
+.section-sub {
+  font-size: 0.95rem; color: var(--smoke);
+  max-width: 680px; margin-bottom: 36px; line-height: 1.5;
+}
+
+/* ─────────────────────────────────────────
+ CHECKLIST (BLOQUE 1)
+───────────────────────────────────────── */
+.checklist-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+  margin-bottom: 28px;
+}
+.check-item {
+  display: flex; gap: 14px; align-items: flex-start;
+  background: var(--bone);
+  border: 1px solid var(--mist); border-left: 3px solid var(--ink);
+  padding: 16px 18px;
+}
+.check-item .num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.4rem; font-weight: 700;
+  color: var(--mustard); min-width: 24px; line-height: 1;
+}
+.check-item h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem; font-weight: 600;
+  margin-bottom: 4px; color: var(--ink);
+}
+.check-item p {
+  font-size: 0.82rem; color: var(--smoke);
+  line-height: 1.5; margin: 0;
+}
+.check-item ul {
+  font-size: 0.8rem; color: var(--smoke);
+  line-height: 1.5; margin-top: 4px;
+}
+.check-full {
+  grid-column: 1 / -1;
+}
+.check-item.warn { border-left-color: var(--mustard); }
+.check-item.ok { border-left-color: var(--green); }
+
+.insight-box {
+  background: var(--ink); color: var(--paper);
+  padding: 22px 28px; display: flex; gap: 20px;
+  align-items: flex-start;
+}
+.insight-box .icon {
+  font-size: 1.5rem; min-width: 28px; margin-top: 2px;
+}
+.insight-box h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem; font-weight: 600;
+  color: var(--mustard); margin-bottom: 6px;
+}
+.insight-box p {
+  font-size: 0.85rem; color: rgba(250,250,250,0.8);
+  line-height: 1.55; margin: 0;
+}
+
+/* ─────────────────────────────────────────
+ TABLA DISTRIBUCIÓN (BLOQUE 2)
+───────────────────────────────────────── */
+.budget-table {
+  width: 100%; border-collapse: collapse;
+  font-size: 0.88rem; margin-bottom: 20px;
+}
+.budget-table th {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--smoke);
+  background: var(--bone); padding: 10px 16px;
+  text-align: left; border-bottom: 2px solid var(--ink);
+}
+.budget-table td {
+  padding: 12px 16px; border-bottom: 1px solid var(--mist);
+  vertical-align: middle;
+}
+.budget-table tr:hover td { background: rgba(201,162,39,0.04); }
+.budget-table .camp-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600; font-size: 0.9rem; color: var(--ink);
+}
+.budget-table .camp-code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px; letter-spacing: 0.12em;
+  color: var(--smoke); display: block; margin-top: 2px;
+}
+.budget-table .amount {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700; font-size: 1rem; color: var(--ink);
+}
+.budget-table .anchor-link {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--cobalt);
+  text-decoration: none; display: inline-block;
+  border-bottom: 1px solid var(--cobalt);
+  transition: color 0.2s;
+}
+.budget-table .anchor-link:hover { color: var(--mustard); border-color: var(--mustard); }
+.badge-tipo {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8.5px; letter-spacing: 0.14em;
+  text-transform: uppercase; padding: 3px 9px;
+  border-radius: 999px; font-weight: 600;
+}
+.badge-tipo.nuevo { background: rgba(30,64,175,0.10); color: var(--cobalt); }
+.badge-tipo.retarg { background: rgba(109,40,217,0.10); color: var(--purple); }
+.budget-summary {
+  background: var(--bone); border: 1px solid var(--mist);
+  border-left: 4px solid var(--mustard);
+  padding: 18px 24px; display: flex; gap: 40px; align-items: center;
+  flex-wrap: wrap;
+}
+.budget-summary .stat-item .stat-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--smoke);
+}
+.budget-summary .stat-item .stat-val {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.6rem; font-weight: 700;
+  color: var(--ink); line-height: 1;
+}
+.budget-summary .stat-item .stat-sub {
+  font-size: 0.74rem; color: var(--smoke); margin-top: 2px;
+}
+.budget-note {
+  margin-top: 14px; padding: 14px 18px;
+  background: rgba(30,64,175,0.06);
+  border-left: 3px solid var(--cobalt);
+  font-size: 0.85rem; line-height: 1.55; color: var(--ink);
+}
+.budget-note strong { color: var(--cobalt); }
+
+/* ─────────────────────────────────────────
+ LÍNEAS DE CAMPAÑA (BLOQUE 3)
+───────────────────────────────────────── */
+.campaign-card {
+  background: var(--paper); border: 1px solid var(--mist);
+  border-top: 4px solid var(--mustard);
+  margin-bottom: 20px; overflow: hidden;
+}
+.campaign-card.cobalt  { border-top-color: var(--cobalt); }
+.campaign-card.green { border-top-color: var(--green); }
+.campaign-card.red { border-top-color: var(--red); }
+.campaign-card.purple  { border-top-color: var(--purple); }
+
+.campaign-card-header {
+  background: var(--ink); padding: 16px 24px;
+  display: flex; justify-content: space-between;
+  align-items: center; flex-wrap: wrap; gap: 8px;
+}
+.campaign-card-header .camp-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem; font-weight: 700; color: var(--mustard);
+}
+.campaign-card-header .camp-budget {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.16em;
+  color: rgba(250,250,250,0.6); text-transform: uppercase;
+}
+.campaign-card-body { padding: 20px 24px; }
+.camp-meta-row {
+  display: grid; grid-template-columns: 150px 1fr;
+  gap: 4px 14px; font-size: 0.86rem; margin: 5px 0;
+}
+.camp-meta-row .k {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--smoke);
+  font-weight: 600;
+}
+.camp-meta-row .v { color: var(--ink); line-height: 1.5; }
+
+.module-block {
+  margin-top: 16px; background: var(--bone);
+  border: 1px solid var(--mist); border-left: 3px solid var(--cobalt);
+  padding: 14px 18px;
+}
+.module-block.stories { border-left-color: var(--green); }
+.module-block.retarg  { border-left-color: var(--purple); }
+
+.module-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 700;
+  margin-bottom: 6px;
+}
+.module-label.blue { color: var(--cobalt); }
+.module-label.green  { color: var(--green); }
+.module-label.purple { color: var(--purple); }
+
+.module-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.92rem; font-weight: 600;
+  color: var(--ink); margin-bottom: 10px;
+}
+
+.ads-list { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
+.ad-item {
+  background: var(--paper); border: 1px solid var(--rule);
+  padding: 10px 14px;
+}
+.ad-item .ad-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8.5px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--mustard);
+  font-weight: 600; margin-bottom: 4px;
+}
+.ad-item .ad-file {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px; letter-spacing: 0.08em;
+  color: var(--smoke); background: var(--bone);
+  padding: 2px 7px; border-radius: 3px;
+  display: inline-block; margin: 3px 0;
+}
+.ad-item .copy-block {
+  margin-top: 8px; padding: 8px 12px;
+  background: #FAF6EA; border-left: 2px solid var(--mustard);
+  font-family: 'Georgia', serif; font-style: italic;
+  font-size: 0.85rem; color: var(--ink); line-height: 1.5;
+}
+
+.ab-container {
+  margin-top: 12px; background: var(--paper);
+  border: 1.5px dashed var(--mustard); padding: 14px 16px;
+}
+.ab-label-head {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--mustard);
+  font-weight: 700; margin-bottom: 8px;
+  display: inline-block; background: var(--mustard);
+  color: var(--ink); padding: 2px 10px;
+}
+.ab-note {
+  font-size: 0.82rem; color: var(--smoke);
+  line-height: 1.5; margin-bottom: 10px;
+}
+.ab-versions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+.audience-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.14em;
+  text-transform: uppercase; padding: 4px 10px;
+  border-radius: 999px; border: 1px solid;
+  font-weight: 600; margin: 3px 3px 3px 0;
+}
+.audience-pill.a { background: rgba(30,64,175,0.08); color: var(--cobalt); border-color: var(--cobalt); }
+.audience-pill.b { background: rgba(22,101,52,0.08); color: var(--green); border-color: var(--green); }
+.audience-pill.excl { background: rgba(185,28,28,0.07); color: var(--red); border-color: var(--red); }
+
+.faq-anchor {
+  display: inline;
+  color: var(--cobalt);
+  border-bottom: 1px dotted var(--cobalt);
+  cursor: pointer; transition: color 0.2s;
+}
+.faq-anchor:hover { color: var(--mustard); border-color: var(--mustard); }
+
+/* ─────────────────────────────────────────
+ CALENDARIO (BLOQUE 4)
+───────────────────────────────────────── */
+.timeline {
+  display: flex; flex-direction: column; gap: 0;
+  position: relative;
+}
+.timeline::before {
+  content: ''; position: absolute; left: 26px; top: 0; bottom: 0;
+  width: 2px; background: var(--mist);
+}
+.week-block {
+  display: flex; gap: 28px; align-items: flex-start;
+  padding: 0 0 28px 0; position: relative;
+}
+.week-dot {
+  width: 54px; min-width: 54px; height: 54px;
+  border-radius: 50%; background: var(--ink);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.78rem; font-weight: 700; color: var(--paper);
+  flex-direction: column; line-height: 1.1;
+  text-align: center;
+}
+.week-dot.s1 { background: var(--ink); }
+.week-dot.s2 { background: var(--cobalt); }
+.week-dot.s3 { background: var(--green); }
+.week-dot.s4 { background: var(--red); }
+.week-content {
+  flex: 1; background: var(--paper);
+  border: 1px solid var(--mist); padding: 16px 20px;
+  margin-top: 4px;
+}
+.week-content h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.92rem; font-weight: 700; color: var(--ink);
+  margin-bottom: 10px;
+}
+.week-content ol {
+  font-size: 0.86rem; line-height: 1.6; color: var(--ink);
+}
+.week-content ol li { margin: 6px 0; }
+.week-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8.5px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--smoke);
+  display: block; margin-bottom: 6px;
+}
+
+/* ─────────────────────────────────────────
+ FAQ / SOPORTE TÉCNICO (BLOQUE 5)
+───────────────────────────────────────── */
+.faq-grid { display: flex; flex-direction: column; gap: 14px; }
+.faq-card {
+  background: var(--paper); border: 1px solid var(--mist);
+  border-left: 4px solid var(--mustard); overflow: hidden;
+}
+.faq-card-q {
+  padding: 16px 22px; cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 16px;
+  transition: background 0.2s;
+}
+.faq-card-q:hover { background: var(--bone); }
+.faq-q-text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.92rem; font-weight: 600; color: var(--ink);
+  flex: 1;
+}
+.faq-q-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.18em;
+  color: var(--mustard); font-weight: 700;
+  min-width: 28px;
+}
+.faq-toggle {
+  font-size: 1.1rem; color: var(--smoke);
+  transition: transform 0.25s;
+  font-weight: 300; min-width: 20px; text-align: center;
+}
+.faq-card.open .faq-toggle { transform: rotate(45deg); }
+.faq-card-a {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.2s;
+  background: var(--bone);
+}
+.faq-card.open .faq-card-a { max-height: 1200px; }
+.faq-card-a-inner {
+  padding: 18px 22px;
+  font-size: 0.88rem; line-height: 1.6; color: var(--ink);
+  border-top: 1px solid var(--mist);
+}
+.faq-card-a-inner ol,
+.faq-card-a-inner ul { color: var(--ink); }
+.faq-card-a-inner strong { color: var(--ink); font-weight: 600; }
+.faq-card-a-inner code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px; background: var(--paper);
+  border: 1px solid var(--rule); padding: 1px 7px;
+  border-radius: 3px; color: var(--cobalt); letter-spacing: 0.04em;
+}
+.faq-card-a-inner .ruta-step {
+  display: flex; gap: 8px; align-items: flex-start;
+  padding: 7px 10px; background: var(--paper);
+  border: 1px solid var(--rule); margin: 4px 0;
+  font-size: 0.85rem; color: var(--ink);
+}
+.faq-card-a-inner .ruta-step .step-n {
+  background: var(--ink); color: var(--paper);
+  width: 22px; height: 22px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'JetBrains Mono', monospace; font-size: 9px;
+  font-weight: 700; min-width: 22px; margin-top: 1px;
+}
+.faq-card-a-inner .ruta-step .step-bold { font-weight: 600; color: var(--cobalt); }
+
+/* ─────────────────────────────────────────
+ REGLAS DE ORO (BLOQUE 6)
+───────────────────────────────────────── */
+.rules-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+}
+.rule-item {
+  display: flex; gap: 12px; align-items: flex-start;
+  padding: 14px 16px; background: var(--paper);
+  border: 1px solid var(--mist); border-left: 3px solid var(--red);
+}
+.rule-item .rule-icon {
+  font-size: 1.1rem; min-width: 22px; margin-top: 1px;
+}
+.rule-item p {
+  font-size: 0.85rem; line-height: 1.5;
+  color: var(--ink); margin: 0;
+}
+
+/* ─────────────────────────────────────────
+ CIERRE / CTA
+───────────────────────────────────────── */
+.close-section {
+  background: var(--ink); color: var(--paper);
+  padding: 80px 80px;
+}
+.close-section .eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.3em;
+  text-transform: uppercase; color: var(--mustard);
+  display: block; margin-bottom: 16px;
+}
+.close-section h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700; line-height: 1.0;
+  letter-spacing: -0.03em; color: var(--paper);
+  margin-bottom: 14px; max-width: 860px;
+}
+.close-section .sub {
+  font-size: 1rem; color: rgba(250,250,250,0.7);
+  max-width: 640px; margin-bottom: 36px; line-height: 1.6;
+}
+.cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 48px; }
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--mustard); color: var(--ink);
+  padding: 14px 28px; text-decoration: none;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem; font-weight: 700;
+  letter-spacing: 0.02em; text-transform: uppercase;
+  transition: background 0.2s, transform 0.2s;
+  border: 2px solid var(--mustard);
+}
+.btn-primary:hover {
+  background: transparent; color: var(--mustard);
+  transform: translateY(-2px);
+}
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: var(--paper);
+  padding: 14px 28px; text-decoration: none;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem; font-weight: 600;
+  letter-spacing: 0.02em; text-transform: uppercase;
+  border: 2px solid rgba(250,250,250,0.25);
+  transition: border-color 0.2s, color 0.2s;
+}
+.btn-secondary:hover { border-color: var(--mustard); color: var(--mustard); }
+
+.close-cards {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 14px; margin-bottom: 48px;
+}
+.close-card {
+  background: rgba(250,250,250,0.06);
+  border: 1px solid rgba(250,250,250,0.1);
+  border-top: 2px solid var(--mustard);
+  padding: 20px 22px;
+}
+.close-card .c-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--mustard);
+  margin-bottom: 8px;
+}
+.close-card h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.92rem; font-weight: 600;
+  color: var(--paper); margin-bottom: 6px;
+}
+.close-card p {
+  font-size: 0.8rem; color: rgba(250,250,250,0.65);
+  line-height: 1.5; margin: 0;
+}
+
+.close-footer {
+  border-top: 1px solid rgba(250,250,250,0.1);
+  padding-top: 28px; display: flex;
+  justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 12px;
+}
+.close-footer .brand-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: rgba(250,250,250,0.4);
+}
+.close-footer .brand-label strong {
+  color: var(--mustard); font-weight: 600;
+}
+
+/* ─────────────────────────────────────────
+ BOTÓN VOLVER Y RESPLANDOR
+───────────────────────────────────────── */
+@keyframes highlightGlow {
+  0% { box-shadow: 0 0 0 0 rgba(201, 162, 39, 0.8); background: rgba(201, 162, 39, 0.15); }
+  50% { box-shadow: 0 0 0 8px rgba(201, 162, 39, 0); background: rgba(201, 162, 39, 0.05); }
+  100% { box-shadow: 0 0 0 0 rgba(201, 162, 39, 0); background: transparent; }
+}
+.highlight-glow {
+  animation: highlightGlow 2.5s ease-out;
+  border-radius: 4px;
+}
+.btn-back {
+  position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(100px);
+  background: var(--ink); color: var(--mustard); border: 1px solid var(--mustard);
+  padding: 10px 24px; border-radius: 999px;
+  font-family: 'Space Grotesk', sans-serif; font-size: 0.85rem; font-weight: 600;
+  letter-spacing: 0.04em; text-transform: uppercase; cursor: pointer;
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3);
+  z-index: 150; transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.2s, color 0.2s;
+  display: flex; align-items: center; gap: 8px; opacity: 0; pointer-events: none;
+}
+.btn-back.visible {
+  transform: translateX(-50%) translateY(0); opacity: 1; pointer-events: auto;
+}
+.btn-back:hover {
+  background: var(--mustard); color: var(--ink);
+}
+
+/* ─────────────────────────────────────────
+ RESPONSIVE
+───────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .hero, .section, .close-section { padding-left: 40px; padding-right: 40px; }
+  .hero-kpis { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
+  .checklist-grid { grid-template-columns: 1fr; }
+  .rules-grid { grid-template-columns: 1fr; }
+  .ab-versions { grid-template-columns: 1fr; }
+  .close-cards { grid-template-columns: 1fr 1fr; }
+  .budget-summary { gap: 20px; }
+}
+@media (max-width: 700px) {
+  .hero, .section, .close-section { padding-left: 20px; padding-right: 20px; }
+  .top-bar { padding: 10px 16px; }
+  .top-bar .brand .client { display: none; }
+  .top-bar .brand .divider { display: none; }
+  .hero-kpis { grid-template-columns: 1fr 1fr; }
+  .camp-meta-row { grid-template-columns: 1fr; }
+  .ab-versions { grid-template-columns: 1fr; }
+  .nav-float { display: none; }
+  .timeline::before { left: 20px; }
+  .week-dot { width: 42px; min-width: 42px; height: 42px; font-size: 0.6rem; }
+  .close-cards { grid-template-columns: 1fr; }
+  .close-section { padding-top: 56px; padding-bottom: 56px; }
+  .budget-summary { flex-direction: column; gap: 14px; }
+}
+@media (max-width: 480px) {
+  .hero-kpis { grid-template-columns: 1fr; }
+  .cta-row { flex-direction: column; }
+  .btn-primary, .btn-secondary { justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .scroll-progress { transition: none; }
+  .marquee-track { animation: none; }
+}
+
+
+.neon-cobalt-soft {
+  position: relative;
+  border-color: rgba(30,64,175,0.55) !important;
+  box-shadow: 0 0 0 rgba(30,64,175,0.12);
+  animation: neonCobaltSoft 4s ease-in-out infinite alternate;
+}
+
+@keyframes neonCobaltSoft {
+  0% {
+ box-shadow: 0 0 0 rgba(30,64,175,0.10);
+ border-color: rgba(30,64,175,0.35);
+  }
+  100% {
+ box-shadow: 0 0 18px rgba(30,64,175,0.28);
+ border-color: rgba(30,64,175,0.75);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .neon-cobalt-soft {
+ animation: none !important;
+  }
+}
+
+
+/* ─────────────────────────────────────────
+ BRAND LOGO & IDENTITY
+───────────────────────────────────────── */
+.hero-brand-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 36px;
+}
+.hero-brand-logo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.95;
+  transition: transform 0.25s ease;
+}
+.hero-brand-logo:hover {
+  transform: scale(1.03);
+}
+.hero-brand-tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--smoke);
+  letter-spacing: 0.02em;
+  margin-top: 4px;
+}
+
+.footer-brand-signature {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+.footer-brand-signature .footer-brand-logo {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+.footer-brand-signature .footer-brand-logo:hover {
+  opacity: 1;
+}
+.footer-brand-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.footer-brand-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.76rem;
+  color: rgba(255,255,255,0.45);
+  max-width: 580px;
+  line-height: 1.5;
+}
+</style>
+</head>
+
+<body>
+<!-- ═══ BARRA DE PROGRESO ═══ -->
+<div class="scroll-progress" id="scrollBar"></div>
+
+<!-- ═══ TOP BAR FIJA ═══ -->
+<header class="top-bar">
+  <div class="brand" style="display:flex; align-items:center; gap:8px;">
+    <img src="assets/brand/outcode-icon.png" alt="Outcode Icono" style="height:16px; width:auto; object-fit:contain;">
+    <span class="logotype">Outcode</span>
+ <div class="divider"></div>
+ <span class="client">Stellantis Obregón · Jul 2026</span>
+  </div>
+  <div class="actions">
+ <span class="badge-live">Plan activo</span>
+ <a class="btn-wa" href="https://wa.me/526442330130?text=Hola%2C%20tengo%20una%20duda%20sobre%20la%20Gu%C3%ADa%20Operativa%20Stellantis%20Julio%202026" target="_blank" rel="noopener">📲 Escribir por WhatsApp</a>
+  </div>
+</header>
+
+<!-- ═══ MARQUEE ═══ -->
+<div class="marquee-wrap">
+  <div class="marquee-track" aria-hidden="true">
+ <span>Meta Ads Julio 2026</span><span class="accent">·</span>
+ <span>4 líneas activas + 1 opcional</span><span class="accent">·</span>
+ <span>$17,000 MXN Total</span><span class="accent">·</span>
+ <span>martes 7 de julio → 5 de agosto</span><span class="accent">·</span>
+ <span>Estrategia 100% Nativa</span><span class="accent">·</span>
+ <span>Sin Píxel · Sin CRM</span><span class="accent">·</span>
+ <span>WhatsApp Business</span><span class="accent">·</span>
+ <span>Objetivo: Interacción</span><span class="accent">·</span>
+ <span>Outcode Estudio Creativo</span><span class="accent">·</span>
+ <!-- duplicado para el loop infinito -->
+ <span>Meta Ads Julio 2026</span><span class="accent">·</span>
+ <span>4 líneas activas + 1 opcional</span><span class="accent">·</span>
+ <span>$17,000 MXN Total</span><span class="accent">·</span>
+ <span>martes 7 de julio → 5 de agosto</span><span class="accent">·</span>
+ <span>Estrategia 100% Nativa</span><span class="accent">·</span>
+ <span>Sin Píxel · Sin CRM</span><span class="accent">·</span>
+ <span>WhatsApp Business</span><span class="accent">·</span>
+ <span>Objetivo: Interacción</span><span class="accent">·</span>
+ <span>Outcode Estudio Creativo</span><span class="accent">·</span>
+  </div>
+</div>
+
+<!-- ═══ NAVEGACIÓN FLOTANTE ═══ -->
+<nav class="nav-float" aria-label="Navegación rápida de sección">
+  <a href="#hero"><div class="dot"></div><span class="dot-label">Inicio</span></a>
+  <a href="#checklist"><div class="dot"></div><span class="dot-label">Preparación</span></a>
+  <a href="#presupuesto"><div class="dot"></div><span class="dot-label">Presupuesto</span></a>
+  <a href="#campanas"><div class="dot"></div><span class="dot-label">Campañas</span></a>
+  <a href="#calendario"><div class="dot"></div><span class="dot-label">Calendario</span></a>
+  <a href="#soporte"><div class="dot"></div><span class="dot-label">Soporte</span></a>
+  <a href="#reglas"><div class="dot"></div><span class="dot-label">Observaciones</span></a>
+  <a href="#cierre"><div class="dot"></div><span class="dot-label">Contacto</span></a>
+</nav>
+
+<!-- ═══════════════════════════════════════════════
+ HERO
+════════════════════════════════════════════════ -->
+<section class="hero reveal" id="hero">
+  <div class="hero-brand-header">
+    <img class="hero-brand-logo" src="assets/brand/outcode-estudio-creativo-logo.png" alt="Outcode Estudio Creativo Logo">
+    <span class="hero-brand-tagline">Acompañamiento estratégico y creativo</span>
+  </div>
+  <span class="eyebrow">Guía Operativa · Julio 2026</span>
+  <h1>
+ Plan de Pauta Digital<br>
+ <span class="accent">Stellantis Obregón</span>
+  </h1>
+  <p class="lead">
+ Estructura operativa de pauta en Meta Ads Manager para organizar la publicación y promoción de contenidos por modelo, con presupuesto sugerido de $17,000 MXN en 30 días. La estrategia usa herramientas nativas de Meta y no requiere Píxel web ni listas externas. Al no contar con CRM ni Píxel conectado, la calidad comercial de los prospectos deberá validarse directamente por el equipo de Automotriz del Noroeste - GB Automotriz.
+  </p>
+  <div class="hero-kpis">
+ <div class="hero-kpi">
+ <div class="label">Presupuesto total</div>
+ <div class="value mustard">$17K</div>
+ <div class="sub">MXN · 30 días</div>
+ </div>
+ <div class="hero-kpi">
+ <div class="label">Líneas de campaña</div>
+ <div class="value">4+1</div>
+  <div class="sub">4 activas + 1 opcional</div>
+ </div>
+ <div class="hero-kpi">
+ <div class="label">Gasto diario est.</div>
+ <div class="value cobalt">$567</div>
+ <div class="sub">MXN / día L1-L4</div>
+ </div>
+ <div class="hero-kpi">
+ <div class="label">Vigencia</div>
+ <div class="value" style="font-size:1.2rem;">7 jul</div>
+ <div class="sub">→ 5 ago 2026</div>
+ </div>
+  </div>
+  <p class="hero-src">
+ Estrategia basada en:
+ <a href="https://outcodeestudiocreativomx.github.io/Analisis-Presentaci-n-GBA/" target="_blank" rel="noopener">análisis previo OEC</a>
+ — arquitectura consolidada para eliminar dispersión de presupuesto y saturación de Aprendizaje inicial de Meta.
+  </p>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+ BLOQUE 1 · CHECKLIST DE PREPARACIÓN
+════════════════════════════════════════════════ -->
+<section class="section reveal" id="checklist">
+  <span class="section-label">Bloque 1</span>
+  <h2 class="section-title">Lista de preparación</h2>
+  <p class="section-sub">
+ Antes de crear cualquier campaña en Meta Ads Manager, estos 4 puntos deben estar confirmados.
+ Si falta uno, la pauta no arranca de forma correcta.
+  </p>
+
+  <div class="checklist-grid">
+ <div class="check-item neon-cobalt-soft ok">
+ <div class="num">1</div>
+ <div>
+ <h3>WhatsApp Business conectado a Meta</h3>
+ <p>El número debe estar vinculado al Business Manager con lada 52. Formato sugerido para enlaces: 52644XXXXXXX. Ruta: <em>Configuración del negocio → Cuentas de WhatsApp</em>.</p>
+ </div>
+ </div>
+ <div class="check-item neon-cobalt-soft ok">
+ <div class="num">2</div>
+ <div>
+ <h3>Asesor de respuesta asignado</h3>
+ <p>Un asesor cubre el horario 9:00–19:00 con tiempo de respuesta menor a 5 minutos. Los mensajes pagados que no reciben respuesta rápida generan pérdida directa de inversión.</p>
+ </div>
+ </div>
+ <div class="check-item neon-cobalt-soft warn">
+ <div class="num">3</div>
+ <div>
+ <h3>Audiencias nativas creadas en Business Manager</h3>
+ <p>Para la campaña de seguimiento (Línea 5, opcional) se necesitan dos audiencias nativas. Estas audiencias deben crearse a partir del 17 de julio, una vez que las campañas hayan acumulado varios días de interacción y visualización. Al configurarlas, usar una ventana reciente de 9 días para concentrar el seguimiento en personas que interactuaron con la pauta inicial:</p>
+ <ul>
+ <li><strong>Audiencia A</strong> — Personas que interactuaron con la página de Facebook o cuenta de Instagram durante los últimos 9 días.</li>
+ <li><strong>Audiencia B</strong> — Personas que vieron al menos el 50% de los videos de campaña durante los últimos 9 días.</li>
+ </ul>
+ <p style="margin-top:6px;">
+ ¿Nunca has creado estas audiencias?
+ <a href="#faq-audiencias" class="faq-anchor">Ver la guía paso a paso →</a>
+ </p>
+ </div>
+ </div>
+ <div class="check-item neon-cobalt-soft ok">
+ <div class="num">4</div>
+ <div>
+ <h3>Presupuesto y cuenta activa</h3>
+ <p>$17,000 MXN cargados en la cuenta publicitaria + Página de Facebook e Instagram vinculadas al Ads Manager y a WhatsApp Business.</p>
+ </div>
+ </div>
+  </div>
+
+  <div class="insight-box">
+ <div class="icon">💡</div>
+ <div>
+ <h3>Esta estrategia es 100% nativa de Meta — no necesita Píxel web</h3>
+ <p>El objetivo de todas las campañas es abrir conversaciones en WhatsApp, no llevar tráfico a un sitio web. Si la campaña está configurada para mensajes a WhatsApp y no dirige tráfico a un sitio web, el Píxel no es necesario. Verifica que la ubicación de conversión sea WhatsApp y continúa con la publicación.
+ <a href="#faq-pixel" class="faq-anchor" style="color:var(--mustard);">Ver explicación completa →</a></p>
+ </div>
+  </div>
+
+  <div class="insight-box neon-cobalt-soft" style="margin-top:20px;" id="nota-formularios">
+ <div class="icon">📋</div>
+ <div>
+ <h3>Nota operativa · Formularios</h3>
+ <p>En esta fase se priorizará WhatsApp como canal principal, ya que el objetivo operativo de julio es reducir fricción, facilitar la conversación inmediata con el asesor y medir la respuesta comercial de forma más rápida.</p>
+ <p style="margin-top:10px;">Los formularios no se descartan. Podrán evaluarse en una segunda fase o como prueba controlada cuando exista mejor seguimiento de calidad de los prospectos por parte del equipo de <strong>Automotriz del Noroeste - GB Automotriz</strong>.</p>
+ <p style="margin-top:10px;">Si en una etapa posterior se decide utilizar formularios nativos de Meta, será necesario definir un proceso claro de seguimiento para no afectar el tiempo de respuesta. Lo ideal será contar con CRM, conector automático o responsable asignado para atender cada formulario de forma inmediata.</p>
+ </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+ BLOQUE 2 · DISTRIBUCIÓN DE PRESUPUESTO
+════════════════════════════════════════════════ -->
+<section class="section reveal" id="presupuesto">
+  <span class="section-label">Bloque 2</span>
+  <h2 class="section-title">Distribución de presupuesto</h2>
+  <p class="section-sub">
+ $17,000 MXN repartidos en 4 líneas activas + 1 opcional. Los nombres deben quedar exactos en Meta Ads Manager —
+ no los modifiques después de crear la campaña.
+ Haz clic en cualquier módulo para ir directamente a su configuración técnica.
+  </p>
+
+  
+<table class="budget-table">
+  <thead>
+ <tr>
+ <th>#</th>
+ <th>Línea de campaña</th>
+ <th>Nombre en Meta (exacto)</th>
+ <th>Tipo de audiencia</th>
+ <th>Presupuesto</th>
+ <th>Módulos internos</th>
+ </tr>
+  </thead>
+  <tbody>
+ <tr>
+ <td><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--smoke);">L1</span></td>
+ <td>
+ <span class="camp-name">Dodge Attitude</span>
+ <span class="camp-code">JULIO_WA_DODGE_ATTITUDE</span>
+ </td>
+ <td><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--smoke);letter-spacing:.08em;">JULIO_WA_DODGE_ATTITUDE</span></td>
+ <td><span class="badge-tipo nuevo">Público Nuevo</span></td>
+ <td><span class="amount">$5,100 total</span><br><span style="font-size:.75rem;color:var(--smoke);">≈ $170/día</span></td>
+ <td>
+ <a href="#dodge" class="anchor-link">Módulo Principal de Ventas</a><br>
+ <a href="#dodge" class="anchor-link" style="margin-top:4px;display:inline-block;">Módulo de Historias</a>
+ </td>
+ </tr>
+ <tr>
+ <td><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--smoke);">L2</span></td>
+ <td>
+ <span class="camp-name">RAM 700</span>
+ <span class="camp-code">JULIO_WA_RAM700</span>
+ </td>
+ <td><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--smoke);letter-spacing:.08em;">JULIO_WA_RAM700</span></td>
+ <td><span class="badge-tipo nuevo">Público Nuevo</span></td>
+ <td><span class="amount">$5,100 total</span><br><span style="font-size:.75rem;color:var(--smoke);">≈ $170/día</span></td>
+ <td>
+ <a href="#ram700" class="anchor-link">Módulo Principal de Ventas</a><br>
+ <a href="#ram700" class="anchor-link" style="margin-top:4px;display:inline-block;">Módulo de Historias</a>
+ </td>
+ </tr>
+ <tr>
+ <td><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--smoke);">L3</span></td>
+ <td>
+ <span class="camp-name">RAM 1200</span>
+ <span class="camp-code">JULIO_WA_RAM1200</span>
+ </td>
+ <td><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--smoke);letter-spacing:.08em;">JULIO_WA_RAM1200</span></td>
+ <td><span class="badge-tipo nuevo">Público Nuevo</span></td>
+ <td><span class="amount">$5,100 total</span><br><span style="font-size:.75rem;color:var(--smoke);">≈ $170/día</span></td>
+ <td>
+ <a href="#ram1200" class="anchor-link">Módulo Principal de Ventas</a><br>
+ <a href="#ram1200" class="anchor-link" style="margin-top:4px;display:inline-block;">Módulo de Historias</a>
+ </td>
+ </tr>
+ <tr>
+ <td><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--smoke);">L4</span></td>
+ <td>
+ <span class="camp-name">Peugeot 3008</span>
+ <span class="camp-code">JULIO_WA_PEUGEOT</span>
+ </td>
+ <td><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--smoke);letter-spacing:.08em;">JULIO_WA_PEUGEOT</span></td>
+ <td><span class="badge-tipo nuevo">Público Nuevo</span></td>
+ <td><span class="amount">$1,700 total</span><br><span style="font-size:.75rem;color:var(--smoke);">≈ $57/día</span></td>
+ <td>
+ <a href="#peugeot" class="anchor-link">Módulo Principal de Ventas</a><br>
+ <a href="#peugeot" class="anchor-link" style="margin-top:4px;display:inline-block;">Módulo de Historias</a>
+ </td>
+ </tr>
+ <tr>
+ <td><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--smoke);">L5</span></td>
+ <td>
+ <span class="camp-name">Seguimiento / Retargeting opcional</span>
+ <span class="camp-code">JULIO_RETARG_CONSOLIDADO</span>
+ </td>
+ <td><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--smoke);letter-spacing:.08em;">JULIO_RETARG_CONSOLIDADO</span></td>
+ <td><span class="badge-tipo retarg">Usuarios Interesados</span></td>
+ <td><span class="amount">Sin presupuesto inicial</span><br><span style="font-size:.75rem;color:var(--smoke);">valorar al tener audiencias</span></td>
+ <td>
+ <a href="#retarg" class="anchor-link">Módulo Carrusel Attitude</a><br>
+ <a href="#retarg" class="anchor-link" style="margin-top:4px;display:inline-block;">Módulo Carrusel Leasing</a>
+ </td>
+ </tr>
+  </tbody>
+</table>
+
+<div class="budget-summary">
+  <div class="stat-item">
+ <div class="stat-label">Gasto diario sugerido</div>
+ <div class="stat-val">$567</div>
+ <div class="stat-sub">MXN / día (L1–L4)</div>
+  </div>
+  <div class="stat-item">
+ <div class="stat-label">Gasto L5 Seguimiento</div>
+ <div class="stat-val" style="font-size:1.05rem;margin-top:10px;color:var(--mustard);">Valorar al tener audiencias</div>
+ <div class="stat-sub">Sin presupuesto inicial</div>
+  </div>
+  <div class="stat-item">
+ <div class="stat-label">Presupuesto total mes</div>
+ <div class="stat-val" style="color:var(--mustard);">$17,000</div>
+ <div class="stat-sub">MXN · cargado en cuenta</div>
+  </div>
+</div>
+
+<div class="budget-note">
+  <strong>Nota:</strong> Los montos diarios son aproximados. La inversión final debe configurarse sin superar el presupuesto total autorizado de $17,000 MXN.
+</div>
+
+</section>
+
+<!-- ═══════════════════════════════════════════════
+ BLOQUE 3 · ÁRBOL DE CAMPAÑAS
+════════════════════════════════════════════════ -->
+<section class="section reveal" id="campanas">
+  <span class="section-label">Bloque 3</span>
+  <h2 class="section-title">Configuración de cada línea de campaña</h2>
+  <p class="section-sub">
+ Para cada línea: crear campaña → objetivo "Mensajes a WhatsApp" →
+ configurar los módulos internos con los datos de abajo → subir archivos → activar.
+ ¿Dudas sobre cómo vincular WhatsApp?
+ <a href="#faq-whatsapp" class="faq-anchor">Ver guía de configuración →</a>
+  </p>
+
+  <!-- ─── L1 · DODGE ATTITUDE ─── -->
+  <div class="campaign-card reveal" id="dodge"><div style="font-size:0.8rem;color:var(--mustard);margin:12px;font-weight:700;">Confirmar vigencia de promoción antes de publicar.</div>
+ <div class="campaign-card-header">
+ <span class="camp-title">Línea de Campaña: Dodge Attitude 2026</span>
+ <span class="camp-budget">JULIO_WA_DODGE_ATTITUDE · $170 MXN / día · 30 días</span>
+ </div>
+ <div class="campaign-card-body">
+ <div class="camp-meta-row"><span class="k">Objetivo</span><span class="v">Mensajes a WhatsApp</span></div>
+ <div class="camp-meta-row"><span class="k">Optimización</span><span class="v">Conversaciones iniciadas en WhatsApp</span></div>
+
+ <!-- Módulo Principal -->
+ <div class="module-block">
+ <div class="module-label blue">Módulo Principal de Ventas</div>
+ <div class="module-title">Sección de Noticias y Reels (Feed + Reels + Marketplace)</div>
+ <div class="camp-meta-row"><span class="k">Ubicación</span><span class="v">Cd. Obregón · Esperanza · Cócorit · radio 40 km · <strong>sin incluir Navojoa</strong></span></div>
+ <div class="camp-meta-row"><span class="k">Edad</span><span class="v">25 a 54 años. No limitar por género en la configuración inicial. Permitir que Meta distribuya según respuesta.</span></div>
+ <div class="camp-meta-row"><span class="k">Señales sugeridas de audiencia</span><span class="v">Dodge · Dodge Attitude · sedanes · autos compactos · autos nuevos · compradores de autos · comparadores de vehículos.<br><strong style="color:var(--mustard);">Nota general de audiencias:</strong> Las señales de audiencia son referencias para orientar a Meta, no filtros rígidos. Se recomienda mantener audiencias amplias y permitir que Meta optimice la entrega según la respuesta real de los usuarios. Navojoa, Valle del Yaqui, Guaymas, Cd. Obregón, Esperanza y Cócorit deben configurarse como <strong>ubicaciones</strong>, no como intereses.</span></div>
+ <div class="camp-meta-row"><span class="k">Placements</span><span class="v">Advantage+ Placements <strong>(activado)</strong> — Feed, Reels, Marketplace</span></div>
+
+ <p style="margin:12px 0 4px;font-weight:600;font-size:.85rem;">Anuncios que compiten entre sí en este módulo:</p>
+ <div class="ads-list">
+ <div class="ad-item">
+ <div class="ad-tag">Anuncio 1 · Video principal</div>
+ <div class="ad-file" data-file-path="contenido_julio_FINAL_CLIENTE/01_DODGE_ATTITUDE/video_dodge_attitude_9x16.mp4">Video Dodge Attitude 9:16</div>
+ <div class="copy-block">"Dodge Attitude 2026 disponible para entrega inmediata. Diseño deportivo, motor turbo y equipamiento pensado para manejar diferente. Escríbenos y consulta disponibilidad."</div>
+ </div>
+ <div class="ad-item">
+ <div class="ad-tag">Anuncio 2 · Post Rines (imagen 4:5)</div>
+ <div class="ad-file" data-file-path="contenido_julio_FINAL_CLIENTE/01_DODGE_ATTITUDE/post_dodge_attitude_rines_4a5.png">Post Dodge Attitude · Rines 4:5</div>
+ <div class="copy-block">"Dodge Attitude 2026 disponible para entrega inmediata. Diseño deportivo, motor turbo y equipamiento pensado para manejar diferente. Escríbenos y consulta disponibilidad."</div>
+ </div>
+ <div class="ad-item">
+ <div class="ad-tag">Anuncio 3 · Post Interior (imagen 1:1)</div>
+ <div class="ad-file" data-file-path="contenido_julio_FINAL_CLIENTE/01_DODGE_ATTITUDE/post_dodge_attitude_interior_1x1.png">Post Dodge Attitude · Interior 1:1</div>
+ <div class="copy-block">"Dodge Attitude 2026 disponible para entrega inmediata. Diseño deportivo, motor turbo y equipamiento pensado para manejar diferente. Escríbenos y consulta disponibilidad."</div>
+ </div>
+ </div>
+
+ <!-- Test A/B -->
+ <div class="ab-container">
+ <div class="ab-label-head">Prueba A/B interna · Días 9–15</div>
+ <p class="ab-note">
+ El día 9, activa estos dos anuncios adicionales dentro del mismo módulo.
+ Usan el mismo video; solo cambia el texto. Meta repartirá el presupuesto al más eficiente automáticamente.
+ Al día 15: si la diferencia de costo por conversación WhatsApp entre A y B es mayor al 15%, pausa el perdedor.
+ Durante el aprendizaje inicial, evita editar anuncios salvo que exista un error grave.
+ </p>
+ <div class="ab-versions">
+ <div class="ad-item">
+ <div class="ad-tag">Versión A · Entrega inmediata</div>
+ <div class="ad-file" data-file-path="contenido_julio_FINAL_CLIENTE/01_DODGE_ATTITUDE/video_dodge_attitude_9x16.mp4">Video Dodge Attitude 9:16</div>
+ <div class="copy-block">"Dodge Attitude 2026 disponible para entrega inmediata. Diseño deportivo, motor turbo y equipamiento pensado para manejar diferente. Escríbenos y consulta disponibilidad."</div>
+ </div>
+ <div class="ad-item">
+ <div class="ad-tag">Versión B · Precio + Bono</div>
+ <div class="ad-file" data-file-path="contenido_julio_FINAL_CLIENTE/01_DODGE_ATTITUDE/video_dodge_attitude_9x16.mp4">Video Dodge Attitude 9:16</div>
+ <div class="copy-block">"Dodge Attitude 2026 desde $359,900. Bono de hasta $72,000 y 7.99% de tasa. Cótizalo."</div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Módulo Historias -->
+ <div class="module-block stories">
+ <div class="module-label green">Módulo Exclusivo para Formato de Historias (Stories)</div>
+ <div class="module-title">Instagram Stories + Facebook Stories — Placement manual</div>
+ <div class="camp-meta-row"><span class="k">Placements</span><span class="v"><strong>Manual</strong> → Solo Instagram Stories + Facebook Stories. No usar Advantage+ aquí.</span></div>
+ <div class="ads-list">
+ <div class="ad-item">
+ <div class="ad-tag">Historia Dodge Attitude · Rines</div>
+ <div class="ad-file" data-file-path="contenido_julio_FINAL_CLIENTE/01_DODGE_ATTITUDE/historia_dodge_attitude_9x16.png">Historia Dodge Attitude 9:16</div>
+ <div style="font-size:.78rem;color:var(--smoke);margin:3px 0;">Formato 9:16 · 1080×1920 px</div>
+ <div class="copy-block">"Sube de nivel. Dodge Attitude 2026 desde $359,900. Bono de hasta $72,000. Escríbenos."</div>
+ </div>
+ </div>
+ </div>
+
+      <h4 style="margin:20px 0 8px 0; font-size:0.9rem; color:var(--ink);">Piezas asignadas a esta línea</h4>
+      <table class="inventario-tabla" style="width:100%; border-collapse:collapse; margin-bottom:20px; font-size:0.8rem; background:rgba(255,255,255,0.02); color:var(--smoke); border:1px solid rgba(255,255,255,0.1);">
+        <thead>
+          <tr style="background:rgba(255,255,255,0.05); text-align:left; border-bottom:1px solid rgba(255,255,255,0.1);">
+            <th style="padding:10px; width:20%;">Tipo</th>
+            <th style="padding:10px; width:45%;">Archivo final</th>
+            <th style="padding:10px; width:20%;">Descripción visual</th>
+            <th style="padding:10px; width:15%;">Uso</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:10px; font-weight:600;">Video</td>
+            <td style="padding:10px; font-family:monospace; color:var(--mustard);" data-file-path="contenido_julio_FINAL_CLIENTE/01_DODGE_ATTITUDE/video_dodge_attitude_9x16.mp4">Video Dodge Attitude 9:16</td>
+            <td style="padding:10px;">Exterior en movimiento, tomas dinámicas y de detalle.</td>
+            <td style="padding:10px;">Pauta principal (L1)</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:10px; font-weight:600;">Post</td>
+            <td style="padding:10px; font-family:monospace; color:var(--mustard);" data-file-path="contenido_julio_FINAL_CLIENTE/01_DODGE_ATTITUDE/post_dodge_attitude_rines_4a5.png">Post Dodge Attitude · Rines 4:5</td>
+            <td style="padding:10px;">Exterior frontal del sedán blanco y rines negros de 18".</td>
+            <td style="padding:10px;">Pauta principal (L1)</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:10px; font-weight:600;">Post</td>
+            <td style="padding:10px; font-family:monospace; color:var(--mustard);" data-file-path="contenido_julio_FINAL_CLIENTE/01_DODGE_ATTITUDE/post_dodge_attitude_interior_1x1.png">Post Dodge Attitude · Interior 1:1</td>
+            <td style="padding:10px;">Interior del auto con volante de cuero, costuras rojas y tablero.</td>
+            <td style="padding:10px;">Refuerzo / Pauta (L1)</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:10px; font-weight:600;">Historia</td>
+            <td style="padding:10px; font-family:monospace; color:var(--mustard);" data-file-path="contenido_julio_FINAL_CLIENTE/01_DODGE_ATTITUDE/historia_dodge_attitude_9x16.png">Historia Dodge Attitude 9:16</td>
+            <td style="padding:10px;">Exterior perfil completo y detalle de rin negro con llanta.</td>
+            <td style="padding:10px;">Historia (L1)</td>
+          </tr>
+        </tbody>
+      </table>
+ </div>
+  </div>
+
+  <!-- ─── L2 · RAM 700 ─── -->
+  <div class="campaign-card cobalt reveal" id="ram700"><div style="font-size:0.8rem;color:var(--mustard);margin:12px;font-weight:700;">Confirmar vigencia de promoción antes de publicar.</div>
+ <div class="campaign-card-header">
+ <span class="camp-title">Línea de Campaña: RAM 700</span>
+ <span class="camp-budget">JULIO_WA_RAM700 · $170 MXN / día · 30 días</span>
+ </div>
+ <div class="campaign-card-body">
+ <div class="camp-meta-row"><span class="k">Objetivo</span><span class="v">Mensajes a WhatsApp</span></div>
+ <div class="camp-meta-row"><span class="k">Optimización</span><span class="v">Conversaciones iniciadas en WhatsApp</span></div>
+
+ <div class="module-block">
+ <div class="module-label blue">Módulo Principal de Ventas</div>
+ <div class="module-title">Sección de Noticias y Reels — Video + Post</div>
+ <div class="camp-meta-row"><span class="k">Ubicación</span><span class="v">Cd. Obregón + Navojoa + Valle del Yaqui · radio 60 km</span></div>
+ <div class="camp-meta-row"><span class="k">Edad</span><span class="v">25 a 54 años. No limitar por género en la configuración inicial. Permitir que Meta distribuya según respuesta.</span></div>
+ <div class="camp-meta-row"><span class="k">Señales sugeridas de audiencia</span><span class="v">RAM 700 · pickup · comerciantes · emprendedores · flotas · construcción · agricultura · negocios locales · herramienta de trabajo<br><strong style="color:var(--mustard);">Nota:</strong> Usar audiencia amplia con señales relacionadas al modelo. Evitar sobresegmentar. Navojoa, Valle del Yaqui y Guaymas configúralos como ubicaciones.</span></div>
+ <div class="camp-meta-row"><span class="k">Placements</span><span class="v">Advantage+ Placements <strong>(activado)</strong></span></div>
+ <div class="ads-list">
+ <div class="ad-item">
+ <div class="ad-tag">Anuncio 1 · Video principal</div>
+ <div class="ad-file" data-file-path="contenido_julio_FINAL_CLIENTE/02_RAM_700/video_ram_700_9x16.mp4">Video RAM 700 9:16</div>
+ <div class="copy-block">"¿Tu negocio ya te pide una pickup? RAM 700 desde $334,900. Bono de hasta $15,000. Tasa desde 14.5%. Da clic y hablamos."</div>
+ </div>
+ <div class="ad-item">
+ <div class="ad-tag">Anuncio 2 · Post Herramienta (imagen 4:5)</div>
+ <div class="ad-file" data-file-path="contenido_julio_FINAL_CLIENTE/02_RAM_700/post_ram_700_herramienta_4a5.png">Post RAM 700 · Herramienta de trabajo 4:5</div>
+ <div class="copy-block">"¿Tu negocio ya te pide una pickup? RAM 700 desde $334,900. Bono de hasta $15,000. Tasa desde 14.5%. Da clic y hablamos."</div>
+ </div>
+ </div>
+ </div>
+
+ <div class="module-block stories">
+ <div class="module-label green">Módulo Exclusivo para Formato de Historias (Stories)</div>
+ <div class="module-title">Instagram Stories + Facebook Stories — Placement manual</div>
+ <div class="camp-meta-row"><span class="k">Placements</span><span class="v"><strong>Manual</strong> → Solo Instagram Stories + Facebook Stories.</span></div>
+ <div class="ads-list">
+ <div class="ad-item">
+ <div class="ad-tag">Historia RAM 700 · Pickup</div>
+ <div class="ad-file" data-file-path="contenido_julio_FINAL_CLIENTE/02_RAM_700/historia_ram_700_9x16.png">Historia RAM 700 9:16</div>
+ <div style="font-size:.78rem;color:var(--smoke);margin:3px 0;">Formato 9:16 · 1080×1920 px</div>
+ <div class="copy-block">"¿Tu negocio ya te pide una pickup? RAM 700 desde $334,900. Bono hasta $15,000. Escríbenos."</div>
+ </div>
+ </div>
+ </div>
+
+      <h4 style="margin:20px 0 8px 0; font-size:0.9rem; color:var(--ink);">Piezas asignadas a esta línea</h4>
+      <table class="inventario-tabla" style="width:100%; border-collapse:collapse; margin-bottom:20px; font-size:0.8rem; background:rgba(255,255,255,0.02); color:var(--smoke); border:1px solid rgba(255,255,255,0.1);">
+        <thead>
+          <tr style="background:rgba(255,255,255,0.05); text-align:left; border-bottom:1px solid rgba(255,255,255,0.1);">
+            <th style="padding:10px; width:20%;">Tipo</th>
+            <th style="padding:10px; width:45%;">Archivo final</th>
+            <th style="padding:10px; width:20%;">Descripción visual</th>
+            <th style="padding:10px; width:15%;">Uso</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:10px; font-weight:600;">Video</td>
+            <td style="padding:10px; font-family:monospace; color:var(--mustard);" data-file-path="contenido_julio_FINAL_CLIENTE/02_RAM_700/video_ram_700_9x16.mp4">Video RAM 700 9:16</td>
+            <td style="padding:10px;">Video vertical de la pickup en movimiento y tomas comerciales.</td>
+            <td style="padding:10px;">Pauta principal (L2)</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:10px; font-weight:600;">Post</td>
+            <td style="padding:10px; font-family:monospace; color:var(--mustard);" data-file-path="contenido_julio_FINAL_CLIENTE/02_RAM_700/post_ram_700_herramienta_4a5.png">Post RAM 700 · Herramienta de trabajo 4:5</td>
+            <td style="padding:10px;">Exterior trasero de pickup blanca cargada con cajas Bachoco.</td>
+            <td style="padding:10px;">Pauta principal (L2)</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:10px; font-weight:600;">Historia</td>
+            <td style="padding:10px; font-family:monospace; color:var(--mustard);" data-file-path="contenido_julio_FINAL_CLIENTE/02_RAM_700/historia_ram_700_9x16.png">Historia RAM 700 9:16</td>
+            <td style="padding:10px;">Exterior trasero con carga Bachoco y asesor sonriendo.</td>
+            <td style="padding:10px;">Historia (L2)</td>
+          </tr>
+        </tbody>
+      </table>
+ </div>
+  </div>
+
+  <!-- ─── L3 · RAM 1200 ─── -->
+  <div class="campaign-card green reveal" id="ram1200">
+ <div class="campaign-card-header">
+ <span class="camp-title">Línea de Campaña: RAM 1200 Tradesman</span>
+ <span class="camp-budget">JULIO_WA_RAM1200 · $170 MXN / día · 30 días</span>
+ </div>
+ <div class="campaign-card-body">
+ <div class="camp-meta-row"><span class="k">Objetivo</span><span class="v">Mensajes a WhatsApp</span></div>
+ <div class="camp-meta-row"><span class="k">Optimización</span><span class="v">Conversaciones iniciadas en WhatsApp</span></div>
+
+ <div class="module-block">
+ <div class="module-label blue">Módulo Principal de Ventas</div>
+ <div class="module-title">Sección de Noticias y Reels — Video + Posts</div>
+ <div class="camp-meta-row"><span class="k">Ubicación</span><span class="v">Cd. Obregón + Guaymas + Navojoa · radio 60 km</span></div>
+ <div class="camp-meta-row"><span class="k">Edad</span><span class="v">25 a 54 años. No limitar por género en la configuración inicial. Permitir que Meta distribuya según respuesta.</span></div>
+ <div class="camp-meta-row"><span class="k">Señales sugeridas de audiencia</span><span class="v">RAM · RAM 1200 · Tradesman · pickup · vehículo familiar · trabajo pesado · arrastre · off-road · carga<br><strong style="color:var(--mustard);">Nota:</strong> Usar audiencia amplia con señales relacionadas al modelo. Evitar sobresegmentar. Navojoa, Valle del Yaqui y Guaymas configúralos como ubicaciones.</span></div>
+ <div class="camp-meta-row"><span class="k">Placements</span><span class="v">Advantage+ Placements <strong>(activado)</strong></span></div>
+ <div class="ads-list">
+ <div class="ad-item">
+ <div class="ad-tag">Anuncio 1 · Video principal</div>
+ <div class="ad-file" data-file-path="contenido_julio_FINAL_CLIENTE/03_RAM_1200/video_ram_1200_16x9.mp4">Video RAM 1200 Tradesman 16:9</div>
+ <div class="copy-block">"RAM 1200 Tradesman para trabajo, carga y uso diario. Desde $408,400, con descuento de hasta $41,500 y sin comisión por apertura. Consulta disponibilidad por WhatsApp."</div>
+ </div>
+ <div class="ad-item">
+ <div class="ad-tag">Anuncio 2 · Post Pickup (imagen 1:1)</div>
+ <div class="ad-file" data-file-path="contenido_julio_FINAL_CLIENTE/03_RAM_1200/post_ram_1200_desierto_1x1.png">Post RAM 1200 · Terreno desértico 1:1</div>
+ <div class="copy-block">"RAM 1200 Tradesman para trabajo, carga y uso diario. Desde $408,400, con descuento de hasta $41,500 y sin comisión por apertura. Consulta disponibilidad por WhatsApp."</div>
+ </div>
+ <div class="ad-item">
+ <div class="ad-tag">Anuncio 3 · Post Pickup variante B (imagen 1:1)</div>
+ <div class="ad-file" data-file-path="contenido_julio_FINAL_CLIENTE/03_RAM_1200/post_ram_1200_bosque_1x1.png">Post RAM 1200 · Bosque 1:1</div>
+ <div class="copy-block">"RAM 1200 Tradesman para trabajo, carga y uso diario. Desde $408,400, con descuento de hasta $41,500 y sin comisión por apertura. Consulta disponibilidad por WhatsApp."</div>
+ </div>
+ </div>
+ </div>
+
+ <div class="module-block stories">
+ <div class="module-label green">Módulo Exclusivo para Formato de Historias (Stories)</div>
+ <div class="module-title">Instagram Stories + Facebook Stories — Placement manual</div>
+ <div class="camp-meta-row"><span class="k">Placements</span><span class="v"><strong>Manual</strong> → Solo Instagram Stories + Facebook Stories.</span></div>
+ <div class="ads-list">
+ <div class="ad-item">
+ <div class="ad-tag">Historia RAM 1200 · Variante A</div>
+ <div class="ad-file" data-file-path="contenido_julio_FINAL_CLIENTE/03_RAM_1200/historia_ram_1200_carga_01_9x16.png">Historia RAM 1200 · Carga 01 9:16</div>
+ <div style="font-size:.78rem;color:var(--smoke);margin:3px 0;">9:16 · 1080×1920 px · Bono $40,000 + sin comisión apertura</div>
+ <div class="copy-block">"RAM 1200 Tradesman para trabajo, carga y uso diario. Desde $408,400, con descuento de hasta $41,500 y sin comisión por apertura. Consulta disponibilidad por WhatsApp."</div>
+ </div>
+ <div class="ad-item">
+ <div class="ad-tag">Historia RAM 1200 · Variante B</div>
+ <div class="ad-file" data-file-path="contenido_julio_FINAL_CLIENTE/03_RAM_1200/historia_ram_1200_carga_02_9x16.png">Historia RAM 1200 · Carga 02 9:16</div>
+ <div style="font-size:.78rem;color:var(--smoke);margin:3px 0;">9:16 · 1080×1920 px</div>
+ <div class="copy-block">"RAM 1200 Tradesman para trabajo, carga y uso diario. Desde $408,400, con descuento de hasta $41,500 y sin comisión por apertura. Consulta disponibilidad por WhatsApp."</div>
+ </div>
+ </div>
+ </div>
+
+      <h4 style="margin:20px 0 8px 0; font-size:0.9rem; color:var(--ink);">Piezas asignadas a esta línea</h4>
+      <table class="inventario-tabla" style="width:100%; border-collapse:collapse; margin-bottom:20px; font-size:0.8rem; background:rgba(255,255,255,0.02); color:var(--smoke); border:1px solid rgba(255,255,255,0.1);">
+        <thead>
+          <tr style="background:rgba(255,255,255,0.05); text-align:left; border-bottom:1px solid rgba(255,255,255,0.1);">
+            <th style="padding:10px; width:20%;">Tipo</th>
+            <th style="padding:10px; width:45%;">Archivo final</th>
+            <th style="padding:10px; width:20%;">Descripción visual</th>
+            <th style="padding:10px; width:15%;">Uso</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:10px; font-weight:600;">Video</td>
+            <td style="padding:10px; font-family:monospace; color:var(--mustard);" data-file-path="contenido_julio_FINAL_CLIENTE/03_RAM_1200/video_ram_1200_16x9.mp4">Video RAM 1200 Tradesman 16:9</td>
+            <td style="padding:10px;">Video horizontal 16:9 de la pickup Tradesman en carretera.</td>
+            <td style="padding:10px;">Pauta principal (L3)</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:10px; font-weight:600;">Post</td>
+            <td style="padding:10px; font-family:monospace; color:var(--mustard);" data-file-path="contenido_julio_FINAL_CLIENTE/03_RAM_1200/post_ram_1200_desierto_1x1.png">Post RAM 1200 · Terreno desértico 1:1</td>
+            <td style="padding:10px;">Exterior frontal de pickup plata en camino rocoso desértico.</td>
+            <td style="padding:10px;">Pauta principal (L3)</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:10px; font-weight:600;">Post</td>
+            <td style="padding:10px; font-family:monospace; color:var(--mustard);" data-file-path="contenido_julio_FINAL_CLIENTE/03_RAM_1200/post_ram_1200_bosque_1x1.png">Post RAM 1200 · Bosque 1:1</td>
+            <td style="padding:10px;">Exterior frontal de pickup plata sin carga en bosque con río.</td>
+            <td style="padding:10px;">Refuerzo / Pauta (L3)</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:10px; font-weight:600;">Historia</td>
+            <td style="padding:10px; font-family:monospace; color:var(--mustard);" data-file-path="contenido_julio_FINAL_CLIENTE/03_RAM_1200/historia_ram_1200_carga_01_9x16.png">Historia RAM 1200 · Carga 01 9:16</td>
+            <td style="padding:10px;">Exterior de pickup plata remolcando contenedor de caballos.</td>
+            <td style="padding:10px;">Historia (L3)</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:10px; font-weight:600;">Historia</td>
+            <td style="padding:10px; font-family:monospace; color:var(--mustard);" data-file-path="contenido_julio_FINAL_CLIENTE/03_RAM_1200/historia_ram_1200_carga_02_9x16.png">Historia RAM 1200 · Carga 02 9:16</td>
+            <td style="padding:10px;">Exterior de pickup plata cargada con barriles en campo de trigo.</td>
+            <td style="padding:10px;">Historia (L3)</td>
+          </tr>
+        </tbody>
+      </table>
+ </div>
+  </div>
+
+  <!-- ─── L4 · PEUGEOT ─── -->
+  <div class="campaign-card red reveal" id="peugeot">
+ <div class="campaign-card-header">
+ <span class="camp-title">Línea de Campaña: Peugeot 3008</span>
+ <span class="camp-budget">JULIO_WA_PEUGEOT · $57 MXN / día · 30 días</span>
+ </div>
+ <div class="campaign-card-body">
+ <div class="camp-meta-row"><span class="k">Objetivo</span><span class="v">Mensajes a WhatsApp</span></div>
+ <div class="camp-meta-row"><span class="k">Optimización</span><span class="v">Conversaciones iniciadas en WhatsApp</span></div>
+
+ <div class="module-block">
+ <div class="module-label blue">Módulo Principal de Ventas</div>
+ <div class="module-title">Sección de Noticias y Reels — Video + Post</div>
+ <div class="camp-meta-row"><span class="k">Ubicación</span><span class="v">Cd. Obregón · radio 40 km</span></div>
+ <div class="camp-meta-row"><span class="k">Edad</span><span class="v">25 a 54 años. No limitar por género en la configuración inicial. Permitir que Meta distribuya según respuesta.</span></div>
+ <div class="camp-meta-row"><span class="k">Señales sugeridas de audiencia</span><span class="v">Peugeot · Peugeot 3008 · SUVs · diseño europeo · marcas europeas · autos premium<br><strong style="color:var(--mustard);">Nota:</strong> Usar audiencia amplia con señales relacionadas al modelo. Evitar sobresegmentar. Navojoa, Valle del Yaqui y Guaymas configúralos como ubicaciones.</span></div>
+ <div class="camp-meta-row"><span class="k">Placements</span><span class="v">Advantage+ Placements <strong>(activado)</strong></span></div>
+ <div class="ads-list">
+ <div class="ad-item">
+ <div class="ad-tag">Anuncio 1 · Video principal</div>
+ <div class="ad-file" data-file-path="contenido_julio_FINAL_CLIENTE/04_PEUGEOT_3008/video_peugeot_3008_9x16.mp4">Video Peugeot 3008 9:16</div>
+ <div class="copy-block">"Peugeot 3008 con 3 años de mantenimiento gratis y 0% comisión por apertura. Cótizalo por WhatsApp."</div>
+ </div>
+ <div class="ad-item">
+ <div class="ad-tag">Anuncio 2 · Post (imagen 4:5)</div>
+ <div class="ad-file" data-file-path="contenido_julio_FINAL_CLIENTE/04_PEUGEOT_3008/post_peugeot_3008_4x5.png">Post Peugeot 3008 4:5</div>
+ <div class="copy-block">"Peugeot 3008 con 3 años de mantenimiento gratis y 0% comisión por apertura. Cótizalo por WhatsApp."</div>
+ </div>
+ </div>
+ </div>
+
+ <div class="module-block stories">
+ <div class="module-label green">Módulo Exclusivo para Formato de Historias (Stories)</div>
+ <div class="module-title">Instagram Stories + Facebook Stories — Placement manual</div>
+ <div class="camp-meta-row"><span class="k">Placements</span><span class="v"><strong>Manual</strong> → Solo Instagram Stories + Facebook Stories.</span></div>
+ <div class="ads-list">
+ <div class="ad-item">
+ <div class="ad-tag">Historia Peugeot 3008 · Estilo Europeo</div>
+ <div class="ad-file" data-file-path="contenido_julio_FINAL_CLIENTE/04_PEUGEOT_3008/historia_peugeot_3008_01_9x16.png">Historia Peugeot 3008 · Estilo Europeo 9:16</div>
+ <div style="font-size:.78rem;color:var(--smoke);margin:3px 0;">9:16 · 1080×1920 px</div>
+ <div class="copy-block">"Peugeot 3008 con 3 años de mantenimiento gratis y 0% comisión por apertura. Cótizalo por WhatsApp."</div>
+ </div>
+ <div class="ad-item">
+ <div class="ad-tag">Historia Peugeot 3008 · Atardecer</div>
+ <div class="ad-file" data-file-path="contenido_julio_FINAL_CLIENTE/04_PEUGEOT_3008/historia_peugeot_3008_02_9x16.png">Historia Peugeot 3008 · Atardecer 9:16</div>
+ <div style="font-size:.78rem;color:var(--smoke);margin:3px 0;">9:16 · 1080×1920 px</div>
+ <div class="copy-block">"Peugeot 3008 con 3 años de mantenimiento gratis y 0% comisión por apertura. Cótizalo por WhatsApp."</div>
+ </div>
+ </div>
+ </div>
+
+      <h4 style="margin:20px 0 8px 0; font-size:0.9rem; color:var(--ink);">Piezas asignadas a esta línea</h4>
+      <table class="inventario-tabla" style="width:100%; border-collapse:collapse; margin-bottom:20px; font-size:0.8rem; background:rgba(255,255,255,0.02); color:var(--smoke); border:1px solid rgba(255,255,255,0.1);">
+        <thead>
+          <tr style="background:rgba(255,255,255,0.05); text-align:left; border-bottom:1px solid rgba(255,255,255,0.1);">
+            <th style="padding:10px; width:20%;">Tipo</th>
+            <th style="padding:10px; width:45%;">Archivo final</th>
+            <th style="padding:10px; width:20%;">Descripción visual</th>
+            <th style="padding:10px; width:15%;">Uso</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:10px; font-weight:600;">Video</td>
+            <td style="padding:10px; font-family:monospace; color:var(--mustard);" data-file-path="contenido_julio_FINAL_CLIENTE/04_PEUGEOT_3008/video_peugeot_3008_9x16.mp4">Video Peugeot 3008 9:16</td>
+            <td style="padding:10px;">Video vertical de Peugeot 3008 gris oscuro en movimiento.</td>
+            <td style="padding:10px;">Pauta principal (L4)</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:10px; font-weight:600;">Post</td>
+            <td style="padding:10px; font-family:monospace; color:var(--mustard);" data-file-path="contenido_julio_FINAL_CLIENTE/04_PEUGEOT_3008/post_peugeot_3008_4x5.png">Post Peugeot 3008 4:5</td>
+            <td style="padding:10px;">Exterior frontal de SUV 3008 gris oscuro sobre fondo azul/blanco.</td>
+            <td style="padding:10px;">Pauta principal (L4)</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:10px; font-weight:600;">Historia</td>
+            <td style="padding:10px; font-family:monospace; color:var(--mustard);" data-file-path="contenido_julio_FINAL_CLIENTE/04_PEUGEOT_3008/historia_peugeot_3008_01_9x16.png">Historia Peugeot 3008 · Estilo Europeo 9:16</td>
+            <td style="padding:10px;">Exterior frontal de SUV 3008 gris oscuro sobre fondo azul brillante.</td>
+            <td style="padding:10px;">Historia (L4)</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:10px; font-weight:600;">Historia</td>
+            <td style="padding:10px; font-family:monospace; color:var(--mustard);" data-file-path="contenido_julio_FINAL_CLIENTE/04_PEUGEOT_3008/historia_peugeot_3008_02_9x16.png">Historia Peugeot 3008 · Atardecer 9:16</td>
+            <td style="padding:10px;">Exterior frontal de SUV 3008 verde en carretera al atardecer.</td>
+            <td style="padding:10px;">Historia (L4)</td>
+          </tr>
+        </tbody>
+      </table>
+ </div>
+  </div>
+
+  <!-- ─── L5 · SEGUIMIENTO / RETARGETING OPCIONAL ─── -->
+  <div class="campaign-card purple reveal" id="retarg">
+ <div class="campaign-card-header">
+ <span class="camp-title">L5 · Seguimiento / Retargeting opcional</span>
+ <span class="camp-budget">JULIO_RETARG_CONSOLIDADO · Sin presupuesto asignado en esta etapa · Activación opcional</span>
+ </div>
+ <div class="campaign-card-body">
+ <div class="camp-meta-row"><span class="k">Objetivo</span><span class="v">Interacción (o Mensajes si está disponible)</span></div>
+ <div class="camp-meta-row"><span class="k">¿Cuándo activar?</span><span class="v"><strong>A partir del 17 de julio</strong> — no antes. Las audiencias nativas necesitan que las campañas hayan acumulado varios días de interacción para tener volumen suficiente. Nota: La línea L5 es de activación opcional y solo debe valorarse si se cuenta con audiencias de volumen suficiente, además de aprobación de presupuesto adicional o reasignación interna.</span></div>
+
+ <div style="margin:12px 0 4px;padding:10px 14px;background:rgba(109,40,217,0.06);border-left:3px solid var(--purple);font-size:.85rem;line-height:1.5;color:var(--ink);">
+ <strong>¿Quiénes ven estos anuncios?</strong> Solo personas que ya interactuaron con la marca:
+ <div style="margin-top:8px;">
+ <span class="audience-pill a">Audiencia A — Interacción FB/IG 9 días</span>
+ <span class="audience-pill b">Audiencia B — Video viewers 50%+ de L1–L4</span>
+ <span class="audience-pill excl">Si Meta no permite excluir enviados en 7 días, usa control por etiquetas en WhatsApp</span>
+ </div>
+ <p style="margin-top:8px;margin-bottom:0;">
+ ¿Nunca creaste estas audiencias?
+ <a href="#faq-audiencias" class="faq-anchor">Ver cómo crearlas paso a paso →</a>
+ </p>
+ </div>
+
+ <!-- Módulo Carrusel Attitude -->
+ <div class="module-block retarg">
+ <div class="module-label purple">Módulo Carrusel Attitude (Retargeting)</div>
+ <div class="module-title">Feed Facebook + Instagram · presupuesto pendiente por aprobar</div>
+ <div class="camp-meta-row"><span class="k">Placements</span><span class="v">Feed Facebook + Instagram únicamente. No usar Historias aquí.</span></div>
+ <div class="ads-list">
+ <div class="ad-item">
+ <div class="ad-tag">Carrusel Dodge Attitude · 4 imágenes</div>
+ <div class="ad-file" data-file-path="contenido_julio_FINAL_CLIENTE/01_DODGE_ATTITUDE/carrusel_dodge_attitude_01_4x5.png">Carrusel Dodge Attitude · Slide 01</div>
+ <div class="ad-file" data-file-path="contenido_julio_FINAL_CLIENTE/01_DODGE_ATTITUDE/carrusel_dodge_attitude_02_4x5.png">Carrusel Dodge Attitude · Slide 02</div>
+ <div class="ad-file" data-file-path="contenido_julio_FINAL_CLIENTE/01_DODGE_ATTITUDE/carrusel_dodge_attitude_03_4x5.png">Carrusel Dodge Attitude · Slide 03</div>
+ <div class="ad-file" data-file-path="contenido_julio_FINAL_CLIENTE/01_DODGE_ATTITUDE/carrusel_dodge_attitude_04_4x5.png">Carrusel Dodge Attitude · Slide 04</div>
+ <div style="font-size:.78rem;color:var(--smoke);margin:4px 0;">Formato carrusel · 4:5 · 1080×1350 px cada slide</div>
+ <div class="copy-block">"¿Ya viste el Dodge Attitude 2026? Desde $359,900 con bono de $72,000. 4 detalles que cambian todo. Ver carrusel."</div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Módulo Carrusel Leasing -->
+ <div class="module-block retarg">
+ <div class="module-label purple">Módulo Carrusel Leasing (Retargeting general)</div>
+ <div class="module-title">Feed Facebook + Instagram · presupuesto pendiente por aprobar</div>
+ <div class="camp-meta-row"><span class="k">Audiencia</span><span class="v">
+ <span class="audience-pill a">Audiencia A — Interacción FB/IG 9 días</span>
+ <span class="audience-pill b">Audiencia B — Video viewers 50%+</span>
+ </span></div>
+ <div class="camp-meta-row"><span class="k">Placements</span><span class="v">Feed Facebook + Instagram únicamente.</span></div>
+ <div class="ads-list">
+ <div class="ad-item">
+ <div class="ad-tag">Carrusel Leasing Stellantis · 4 imágenes</div>
+ <div class="ad-file" data-file-path="contenido_julio_FINAL_CLIENTE/05_LEASING_STELLANTIS/carrusel_leasing_01_4x5.png">Carrusel Leasing Stellantis · Slide 01</div>
+ <div class="ad-file" data-file-path="contenido_julio_FINAL_CLIENTE/05_LEASING_STELLANTIS/carrusel_leasing_02_4x5.png">Carrusel Leasing Stellantis · Slide 02</div>
+ <div class="ad-file" data-file-path="contenido_julio_FINAL_CLIENTE/05_LEASING_STELLANTIS/carrusel_leasing_03_4x5.png">Carrusel Leasing Stellantis · Slide 03</div>
+ <div class="ad-file" data-file-path="contenido_julio_FINAL_CLIENTE/05_LEASING_STELLANTIS/carrusel_leasing_04_4x5.png">Carrusel Leasing Stellantis · Slide 04</div>
+ <div style="font-size:.78rem;color:var(--smoke);margin:4px 0;">Formato carrusel · 4:5 · 1080×1350 px cada slide</div>
+ <div class="copy-block">"Stellantis Leasing. Maneja hoy un auto nuevo con mensualidades fijas. Escríbenos y un asesor te comparte las opciones disponibles."</div>
+ </div>
+
+      <h4 style="margin:20px 0 8px 0; font-size:0.9rem; color:var(--ink);">Piezas asignadas a esta línea</h4>
+      <table class="inventario-tabla" style="width:100%; border-collapse:collapse; margin-bottom:20px; font-size:0.8rem; background:rgba(255,255,255,0.02); color:var(--smoke); border:1px solid rgba(255,255,255,0.1);">
+        <thead>
+          <tr style="background:rgba(255,255,255,0.05); text-align:left; border-bottom:1px solid rgba(255,255,255,0.1);">
+            <th style="padding:10px; width:20%;">Tipo</th>
+            <th style="padding:10px; width:45%;">Archivo final</th>
+            <th style="padding:10px; width:20%;">Descripción visual</th>
+            <th style="padding:10px; width:15%;">Uso</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:10px; font-weight:600;" rowspan="4">Carrusel Attitude</td>
+            <td style="padding:10px; font-family:monospace; color:var(--mustard);" data-file-path="contenido_julio_FINAL_CLIENTE/01_DODGE_ATTITUDE/carrusel_dodge_attitude_01_4x5.png">Carrusel Dodge Attitude · Slide 01</td>
+            <td style="padding:10px;">Exterior trasero y especificaciones técnicas clave (motor, escapes).</td>
+            <td style="padding:10px;" rowspan="4">Retargeting Dodge Attitude</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:10px; font-family:monospace; color:var(--mustard);" data-file-path="contenido_julio_FINAL_CLIENTE/01_DODGE_ATTITUDE/carrusel_dodge_attitude_02_4x5.png">Carrusel Dodge Attitude · Slide 02</td>
+            <td style="padding:10px;">Interior del auto (tablero digital, acabados de fibra de carbono).</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:10px; font-family:monospace; color:var(--mustard);" data-file-path="contenido_julio_FINAL_CLIENTE/01_DODGE_ATTITUDE/carrusel_dodge_attitude_03_4x5.png">Carrusel Dodge Attitude · Slide 03</td>
+            <td style="padding:10px;">Detalle de modos de manejo y consola de velocidades.</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:10px; font-family:monospace; color:var(--mustard);" data-file-path="contenido_julio_FINAL_CLIENTE/01_DODGE_ATTITUDE/carrusel_dodge_attitude_04_4x5.png">Carrusel Dodge Attitude · Slide 04</td>
+            <td style="padding:10px;">Exterior trasero y precio base del Dodge Attitude 2026.</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:10px; font-weight:600;" rowspan="4">Carrusel Leasing</td>
+            <td style="padding:10px; font-family:monospace; color:var(--mustard);" data-file-path="contenido_julio_FINAL_CLIENTE/05_LEASING_STELLANTIS/carrusel_leasing_01_4x5.png">Carrusel Leasing Stellantis · Slide 01</td>
+            <td style="padding:10px;">Exterior de Peugeot 3008 azul sobre fondo gris. Estrenar auto.</td>
+            <td style="padding:10px;" rowspan="4">Retargeting General Leasing</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:10px; font-family:monospace; color:var(--mustard);" data-file-path="contenido_julio_FINAL_CLIENTE/05_LEASING_STELLANTIS/carrusel_leasing_02_4x5.png">Carrusel Leasing Stellantis · Slide 02</td>
+            <td style="padding:10px;">Mujer celebrando con su teléfono, fondo Peugeot 3008.</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:10px; font-family:monospace; color:var(--mustard);" data-file-path="contenido_julio_FINAL_CLIENTE/05_LEASING_STELLANTIS/carrusel_leasing_03_4x5.png">Carrusel Leasing Stellantis · Slide 03</td>
+            <td style="padding:10px;">Tres asesores sonriendo y requisitos (Constancia fiscal, buró).</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:10px; font-family:monospace; color:var(--mustard);" data-file-path="contenido_julio_FINAL_CLIENTE/05_LEASING_STELLANTIS/carrusel_leasing_04_4x5.png">Carrusel Leasing Stellantis · Slide 04</td>
+            <td style="padding:10px;">Entrega de llaves entre asesor y cliente. CTA de Precalificación.</td>
+          </tr>
+        </tbody>
+      </table>
+ </div>
+ </div>
+ </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+ BLOQUE 4 · CALENDARIO
+════════════════════════════════════════════════ -->
+<section class="section reveal" id="calendario">
+  <span class="section-label">Bloque 4</span>
+  <h2 class="section-title">Calendario de acciones</h2>
+  <p class="section-sub">Qué hacer exactamente en cada semana. Sigue este orden y no adelantes acciones.</p>
+  <div class="calendar-scope-note" style="margin-top:-10px; margin-bottom:24px; padding:12px 16px; background:var(--bone); border-left:4px solid var(--mustard); font-size:0.88rem; color:var(--ink); font-family:'Inter', sans-serif;">
+    <strong>Nota de alcance:</strong> Esta guía contempla únicamente la operación de pauta pagada en Meta Ads. La publicación orgánica no forma parte del alcance de este documento.
+  </div>
+
+  <div class="timeline">
+ <div class="week-block reveal">
+ <div class="week-dot s1"><span>S</span><span>1</span></div>
+ <div class="week-content">
+ <span class="week-date">Semana 1 · 7–13 jul · Días 1–7</span>
+ <h3>Arrancan las 4 líneas de vehículos</h3>
+ <ol>
+ <li><strong>Día 1 (7 jul).</strong> Crear las 4 líneas de campaña (Dodge Attitude, RAM 700, RAM 1200, Peugeot) con los datos del Bloque 3. En cada una: activar el Módulo Principal de Ventas y el Módulo de Historias. Verificar que todas estén en estado "Activa" antes de las 12:00 pm.</li>
+ <li><strong>Días 2–7.</strong> No modificar nada. Solo anotar en una hoja diaria: cantidad de mensajes recibidos en WhatsApp por línea y gasto real reportado en Meta Ads Manager.</li>
+ <li><strong>Recordatorio clave:</strong> La primera semana sirve para acumular señales iniciales. El rendimiento puede ser irregular y no debe evaluarse de forma definitiva en los primeros días.</li>
+ </ol>
+ </div>
+ </div>
+
+ <div class="week-block reveal">
+ <div class="week-dot s2"><span>S</span><span>2</span></div>
+ <div class="week-content">
+ <span class="week-date">Semana 2 · 14–20 jul · Días 8–14</span>
+ <h3>Revisión inicial y valoración de seguimiento</h3>
+ <ol>
+ <li><strong>Día 8 (14 jul).</strong> Revisar el Costo por Mensaje (Costo por conversación WhatsApp) de cada módulo en Meta Ads Manager. Las decisiones de optimización deben tomarse con base en datos observados dentro de Meta Ads Manager y en la calidad reportada manualmente por el equipo comercial.</li>
+ <li><strong>Día 9 (15 jul).</strong> Activar la Prueba A/B dentro del Módulo Principal de la línea Dodge Attitude.</li>
+<li><strong>Días 9–15.</strong> Dejar correr la prueba sin cambios.</li>
+ <li><strong>Día 11 (17 jul).</strong> Crear las audiencias nativas con ventana reciente de 9 días.</li>
+ 
+ </ol>
+ </div>
+ </div>
+
+ <div class="week-block reveal">
+ <div class="week-dot s3"><span>S</span><span>3</span></div>
+ <div class="week-content">
+ <span class="week-date">Semana 3 · 21–27 jul · Días 15–21</span>
+ <h3>Decisión A/B y ajuste de presupuesto</h3>
+ <ol>
+ <li><strong>Día 15 (21 jul).</strong> Resultado de la Prueba A/B de la línea Dodge. Si la diferencia de costo por conversación WhatsApp entre Versión A y B es <strong>mayor al 15%</strong>: pausar la perdedora y aumentar el presupuesto de la ganadora dentro del módulo. Si es menor al 15%, dejar correr ambas.</li>
+ <li><strong>Días 16–21.</strong> Ajustar el gasto diario de las líneas L1–L4: considerar ajustes controlados según costo, volumen y calidad manual registrada. <strong>Regla: no bajar más del 50% del presupuesto original por línea.</strong></li>
+ </ol>
+ </div>
+ </div>
+
+ <div class="week-block reveal">
+ <div class="week-dot s4"><span>S</span><span>4</span></div>
+ <div class="week-content">
+ <span class="week-date">Semana 4 · 28 jul – 5 ago · Cierre</span>
+ <h3>Datos, ajuste final y cierre de mes</h3>
+ <ol>
+ <li><strong>Día 25 (31 jul).</strong> Descargar datos de Meta Ads Manager: gasto total, costo por conversación WhatsApp, mensajes recibidos y conversaciones iniciadas por línea y por módulo.</li>
+ <li><strong>Día 26 (1 ago).</strong> Antes de pausar una línea, revisar costo, volumen, creatividad, comentarios del asesor y calidad manual registrada. No pausar únicamente por un dato aislado.</li>
+ <li><strong>Día 27 (2 ago).</strong> Realizar corte preliminar de desempeño sin pausar campañas activas.</li>
+ <li><strong>Día 30 (5 ago).</strong> Pausar campañas, exportar resultados finales y preparar reporte de cierre: gasto, conversaciones, costo por conversación WhatsApp, piezas con mejor respuesta y observaciones de calidad reportadas por asesor.</li>
+ </ol>
+ </div>
+ </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+ BLOQUE 5 · SOPORTE TÉCNICO (FAQ)
+════════════════════════════════════════════════ -->
+<section class="section reveal" id="soporte">
+  <span class="section-label">Bloque 5</span>
+  <h2 class="section-title">Soporte técnico y guía de operación</h2>
+  <p class="section-sub">
+ Respuestas directas con la ruta exacta de clics en Meta Ads Manager.
+ Haz clic en cualquier pregunta para expandirla.
+  </p>
+
+  <div class="faq-grid">
+
+ <div class="faq-card" id="faq-whatsapp">
+ <div class="faq-card-q" onclick="toggleFaq(this)">
+ <span class="faq-q-num">P 01</span>
+ <span class="faq-q-text">¿Cómo configuro exactamente una campaña para que los mensajes lleguen a WhatsApp Business?</span>
+ <span class="faq-toggle">+</span>
+ </div>
+ <div class="faq-card-a">
+ <div class="faq-card-a-inner">
+ <p style="margin-bottom:12px;">Ruta exacta en Meta Ads Manager, paso a paso:</p>
+ <div class="ruta-step"><span class="step-n">1</span><span>Haz clic en <span class="step-bold">+ Crear</span> en el panel principal de Ads Manager.</span></div>
+ <div class="ruta-step"><span class="step-n">2</span><span>Cuando Meta pida el objetivo, selecciona <span class="step-bold">"Interacción"</span>.</span></div>
+ <div class="ruta-step"><span class="step-n">3</span><span>En la pantalla del Conjunto de Anuncios, busca el apartado <span class="step-bold">"Ubicación de conversión"</span>.</span></div>
+ <div class="ruta-step"><span class="step-n">4</span><span>En el menú desplegable elige <span class="step-bold">"Apps de mensajería"</span>.</span></div>
+ <div class="ruta-step"><span class="step-n">5</span><span>Aparecerán tres casillas: Messenger, Instagram y WhatsApp. <strong>Desmarca Messenger e Instagram. Deja solo WhatsApp marcado.</strong></span></div>
+ <div class="ruta-step"><span class="step-n">6</span><span>Vincula tu número de WhatsApp Business. Si no aparece en la lista: ve a <span class="step-bold">Configuración del negocio → Cuentas de WhatsApp</span> y agrégalo primero.</span></div>
+ <div class="ruta-step"><span class="step-n">7</span><span>Continúa con la segmentación y archivos del Bloque 3 y publica.</span></div>
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-card" id="faq-audiencias">
+ <div class="faq-card-q" onclick="toggleFaq(this)">
+ <span class="faq-q-num">P 02</span>
+ <span class="faq-q-text">¿Cómo creo las Audiencias A y B si nunca lo he hecho antes?</span>
+ <span class="faq-toggle">+</span>
+ </div>
+ <div class="faq-card-a">
+ <div class="faq-card-a-inner">
+ <p>Estas audiencias deben crearse a partir del 17 de julio. Acceso: menú de 9 cuadrículas (arriba a la izquierda) → <strong>Todas las herramientas</strong> → sección "Activos" → <strong>Audiencias</strong> → botón <strong>"Crear audiencia"</strong> → <strong>"Audiencia personalizada"</strong>.</p>
+ <p><strong>Para la Audiencia A (personas que interactuaron con la marca):</strong></p>
+ <div class="ruta-step"><span class="step-n">1</span><span>Elige la fuente <span class="step-bold">"Página de Facebook"</span> (repite el proceso con <span class="step-bold">"Cuenta de Instagram"</span>).</span></div>
+ <div class="ruta-step"><span class="step-n">2</span><span>Filtro de eventos: deja "Todas las personas que interactuaron con tu página".</span></div>
+ <div class="ruta-step"><span class="step-n">3</span><span>Período: <span class="step-bold">9 días</span>.</span></div>
+ <div class="ruta-step"><span class="step-n">4</span><span>Nombre: <code>PUBLICO_A_Interaccion_FB_IG_9d</code> y guarda.</span></div>
+ <p style="margin-top:12px;"><strong>Para la Audiencia B (espectadores del 50% de videos):</strong></p>
+ <div class="ruta-step"><span class="step-n">1</span><span>Fuente: <span class="step-bold">"Video"</span>.</span></div>
+ <div class="ruta-step"><span class="step-n">2</span><span>Filtro: <span class="step-bold">"Personas que han visto al menos el 50% de tu video"</span>.</span></div>
+ <div class="ruta-step"><span class="step-n">3</span><span>Clic en "Elegir videos" y selecciona los 4 videos de campaña (Dodge, RAM 700, RAM 1200, Peugeot).</span></div>
+ <div class="ruta-step"><span class="step-n">4</span><span>Período: <span class="step-bold">9 días</span>. Nombre: <code>PUBLICO_B_VideoViewers_50pct_9d</code>. Guardar.</span></div>
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-card" id="faq-pixel">
+ <div class="faq-card-q" onclick="toggleFaq(this)">
+ <span class="faq-q-num">P 03</span>
+ <span class="faq-q-text">Meta Ads Manager me muestra el error "Falta el identificador de píxel". ¿Qué hago?</span>
+ <span class="faq-toggle">+</span>
+ </div>
+ <div class="faq-card-a">
+ <div class="faq-card-a-inner">
+ <p>Este aviso puede aparecer cuando Meta detecta que no hay un Píxel web instalado en un sitio. Si la campaña está configurada para mensajes a WhatsApp y no dirige tráfico a un sitio web, el Píxel no es necesario. Verifica que la ubicación de conversión sea WhatsApp y continúa con la publicación.</p>
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-card" id="faq-historia-peso">
+ <div class="faq-card-q" onclick="toggleFaq(this)">
+ <span class="faq-q-num">P 04</span>
+ <span class="faq-q-text">La plataforma rechaza o se traba al cargar el archivo de la Historia por su peso. ¿Cómo lo resuelvo?</span>
+ <span class="faq-toggle">+</span>
+ </div>
+ <div class="faq-card-a">
+ <div class="faq-card-a-inner">
+ <p>Meta acepta imágenes de hasta 30 MB en Stories, pero el Administrador de Anuncios puede trabarse en conexiones lentas con archivos pesados. Si ocurre, sigue este procedimiento:</p>
+ <div class="ruta-step"><span class="step-n">1</span><span>Abre <span class="step-bold">compressjpeg.com</span> o <span class="step-bold">iloveimg.com</span> en tu navegador (gratuitos, sin cuenta).</span></div>
+ <div class="ruta-step"><span class="step-n">2</span><span>Sube el archivo <code data-file-path="contenido_julio_FINAL_CLIENTE/03_RAM_1200/historia_ram_1200_carga_02_9x16.png">Historia RAM 1200 · Carga 02 9:16</code>.</span></div>
+ <div class="ruta-step"><span class="step-n">3</span><span>Descarga la versión comprimida. El objetivo es <span class="step-bold">menos de 10 MB</span>. La calidad visual en celular es prácticamente idéntica.</span></div>
+ <div class="ruta-step"><span class="step-n">4</span><span>Sube el archivo comprimido al Administrador de Anuncios en lugar del original.</span></div>
+ </div>
+ </div>
+ </div>
+</div>
+
+ 
+</section>
+
+<!-- ═══════════════════════════════════════════════
+ BLOQUE 6 · REGLAS DE ORO
+════════════════════════════════════════════════ -->
+
+<!-- ═══════════════════════════════════════════════
+ REGISTRO DE CALIDAD
+════════════════════════════════════════════════ -->
+<section class="section reveal" id="registro-calidad">
+  <span class="section-label">Acompañamiento Comercial</span>
+  <h2 class="section-title">Registro manual de calidad de prospectos</h2>
+  <p class="section-sub">Al no contar con CRM ni Píxel conectado, la calidad comercial no podrá validarse automáticamente desde Meta. El equipo de Automotriz del Noroeste - GB Automotriz deberá registrar manualmente el seguimiento de cada conversación. Sin este registro manual compartido, Outcode no podrá validar ventas cerradas ni calidad comercial de la pauta.</p>
+  
+  <div class="insight-box" style="background:var(--mustard);color:var(--ink);margin-bottom:24px;">
+ <div class="icon">⚠️</div>
+ <div>
+ <h3 style="color:var(--ink);">Seguimiento Semanal de Outcode</h3>
+ <p style="color:rgba(0,0,0,0.85);">Cada lunes por la tarde, Outcode enviará una actualización breve con los KPIs disponibles (Gasto, Conversaciones, Costos, Piezas con mayor interacción). La ejecución de cambios en Meta Ads Manager corresponde al cliente. <strong>Sin el registro manual, Outcode no podrá validar ventas cerradas ni calidad comercial.</strong></p>
+ </div>
+  </div>
+
+  <div style="overflow-x:auto;">
+ <table class="budget-table">
+ <thead>
+ <tr>
+ <th>Fecha</th>
+ <th>Modelo</th>
+ <th>Nombre</th>
+ <th>Teléfono</th>
+ <th>Campaña</th>
+ <th>¿Respondió?</th>
+ <th>¿Cotizó?</th>
+ <th>¿Cita?</th>
+ <th>Comentarios</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+ <tr><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+ <tr><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+ </tbody>
+ </table>
+  </div>
+  <p style="font-size:0.8rem;color:var(--smoke);margin-top:10px;">* Este registro es necesario para que las recomendaciones semanales no dependan solo del costo por conversación, sino también de la calidad percibida por el asesor.</p>
+</section>
+
+<section class="section reveal" id="reglas">
+  <span class="section-label">Bloque 6</span>
+  <h2 class="section-title">Observaciones importantes antes de publicar</h2>
+  <p class="section-sub">
+ Estas observaciones ayudan a mantener una operación ordenada y evitar cambios que compliquen la lectura de resultados.
+  </p>
+
+  <div class="rules-grid">
+ <div class="rule-item neon-cobalt-soft">
+ <div class="rule-icon">⚖️</div>
+ <p><strong>Promociones y Leasing:</strong> Si una pieza menciona leasing, tasa, mensualidad, comisión, bono, o descuento, el cliente debe validar vigencia y cumplimiento legal antes de publicar.</p>
+ </div>
+
+ <div class="rule-item neon-cobalt-soft">
+ <span class="rule-icon">🚫</span>
+ <p>Evitar usar "Promocionar publicación" desde la página de Facebook. Siempre crear las campañas desde el flujo completo de Meta Ads Manager.</p>
+ </div>
+ <div class="rule-item neon-cobalt-soft">
+ <span class="rule-icon">🚫</span>
+ <p>Evitar cambiar el nombre de la campaña después de haberla creado, ya que los nombres funcionan como identificadores de seguimiento.</p>
+ </div>
+ <div class="rule-item neon-cobalt-soft">
+ <span class="rule-icon">🚫</span>
+ <p>Evitar crear una 6ª campaña separada para la prueba A/B; la prueba debe configurarse dentro del Módulo de la línea Dodge Attitude.</p>
+ </div>
+ <div class="rule-item neon-cobalt-soft">
+ <span class="rule-icon">🚫</span>
+ <p>Evitar editar anuncios durante las primeras 72 horas, salvo error grave. Cambios prematuros pueden afectar la estabilidad de la entrega.</p>
+ </div>
+ 
+ <div class="rule-item neon-cobalt-soft">
+ <span class="rule-icon">🚫</span>
+ <p>No activar la línea opcional de seguimiento (L5) sin audiencias suficientes y sin aprobación de presupuesto adicional o reasignación interna.</p>
+ </div>
+ <div class="rule-item neon-cobalt-soft">
+ <span class="rule-icon">🚫</span>
+ <p>Evitar pausas o ajustes fuertes antes de revisar costo, volumen y calidad manual registrada.</p>
+ </div>
+ <div class="rule-item neon-cobalt-soft">
+ <span class="rule-icon">🚫</span>
+ <p>Responder WhatsApp oportunamente. La velocidad de respuesta es clave para la conversión de los prospectos.</p>
+ </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+ CIERRE / CTA
+════════════════════════════════════════════════ -->
+<section class="close-section reveal" id="cierre">
+  <span class="eyebrow">Outcode Estudio Creativo · Stellantis Obregón · Julio 2026</span>
+  <h2>¿Dudas sobre<br>la operación de la pauta?</h2>
+  <p class="sub">
+ El equipo de Outcode está disponible para resolver cualquier duda técnica durante la ejecución
+ del plan. Escríbenos por WhatsApp con tu pregunta y el número de la línea
+ de campaña afectada.
+  </p>
+
+  <div class="cta-row">
+ <a class="btn-primary" href="https://wa.me/526442330130?text=Hola%2C%20tengo%20una%20duda%20sobre%20la%20Gu%C3%ADa%20Operativa%20Stellantis%20Julio%202026" target="_blank" rel="noopener">
+ 📲 Escribir por WhatsApp
+ </a>
+  </div>
+
+  <div class="close-cards">
+ <div class="close-card">
+ <div class="c-tag">Objetivo operativo</div>
+ <h3>Dirigir usuarios interesados a WhatsApp</h3>
+ <p>Establecer contacto directo con prospectos interesados en los modelos de Stellantis a través de WhatsApp Business para iniciar la atención comercial.</p>
+ </div>
+ <div class="close-card">
+ <div class="c-tag">Regla operativa</div>
+ <h3>Evitar cambios durante las primeras 72 horas</h3>
+ <p>No modificar presupuestos, anuncios ni pausar campañas durante las primeras 72 horas para asegurar la estabilidad en la entrega y el aprendizaje inicial de Meta.</p>
+ </div>
+ <div class="close-card">
+ <div class="c-tag">Alcance</div>
+ <h3>Plan estratégico</h3>
+ <p>Plan operativo de acompañamiento estratégico y creativo por Outcode Estudio Creativo para ordenar la ejecución de la pauta sin superar el presupuesto total.</p>
+ </div>
+</div>
+<div class="close-footer">
+ <span class="brand-label">
+ Elaborado por <strong>Outcode Estudio Creativo</strong> ·
+ Guía operativa Julio 2026 · Stellantis Obregón ·
+ Arquitectura consolidada de 4 líneas activas + 1 opcional
+ </span>
+ <span class="brand-label" style="font-size:8px;opacity:.5;">
+ martes 7 de julio → 5 de agosto 2026 · $17,000 MXN · Meta Ads Manager
+ </span>
+   <div class="footer-brand-signature">
+    <img class="footer-brand-logo" src="assets/brand/outcode-estudio-creativo-logo.png" alt="Outcode Estudio Creativo Logo">
+    <div class="footer-brand-info">
+      <span class="footer-brand-subtitle">Acompañamiento estratégico y creativo para Stellantis Obregón · Automotriz del Noroeste - GB Automotriz.</span>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- ═══ BOTÓN VOLVER ═══ -->
+<button id="btnBack" class="btn-back" aria-label="Volver a la posición anterior">
+  <span>←</span> Volver atrás
+</button>
+
+<!-- ═══════════════════════════════════════════════
+ SCRIPTS
+════════════════════════════════════════════════ -->
+<script>
+/* ── Barra de progreso de lectura ── */
+const bar = document.getElementById('scrollBar');
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const total = document.documentElement.scrollHeight - window.innerHeight;
+  bar.style.width = (scrolled / total * 100) + '%';
+}, { passive: true });
+
+/* ── Reveal con IntersectionObserver ── */
+const reveals = document.querySelectorAll('.reveal');
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+ if (e.isIntersecting) {
+ e.target.classList.add('visible');
+ revealObs.unobserve(e.target);
+ }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+reveals.forEach(el => revealObs.observe(el));
+
+/* ── Navegación flotante activa ── */
+const sections = document.querySelectorAll('section[id], div[id]');
+const navLinks = document.querySelectorAll('.nav-float a');
+const sectionObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+ if (e.isIntersecting) {
+ navLinks.forEach(l => l.classList.remove('active'));
+ const active = document.querySelector(`.nav-float a[href="#${e.target.id}"]`);
+ if (active) active.classList.add('active');
+ }
+  });
+}, { threshold: 0.35 });
+document.querySelectorAll('section[id]').forEach(s => sectionObs.observe(s));
+
+/* ── FAQ accordion ── */
+function toggleFaq(header) {
+  const card = header.closest('.faq-card');
+  const isOpen = card.classList.contains('open');
+  // cerrar todos
+  document.querySelectorAll('.faq-card.open').forEach(c => c.classList.remove('open'));
+  // abrir el clickeado si estaba cerrado
+  if (!isOpen) card.classList.add('open');
+}
+
+/* ── Abrir FAQ por ancla hash ── */
+function openFaqFromHash() {
+  const hash = window.location.hash;
+  if (hash) {
+ const target = document.querySelector(hash);
+ if (target && target.classList.contains('faq-card')) {
+ setTimeout(() => {
+ target.classList.add('open');
+ target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+ }, 350);
+ }
+  }
+}
+window.addEventListener('load', openFaqFromHash);
+window.addEventListener('hashchange', openFaqFromHash);
+
+/* ── Links de ancla dentro del texto que abren FAQ ── */
+document.querySelectorAll('a.faq-anchor').forEach(link => {
+  link.addEventListener('click', function(e) {
+ const href = this.getAttribute('href');
+ if (!href || !href.startsWith('#faq-')) return;
+ const target = document.getElementById(href.slice(1));
+ if (!target) return;
+ e.preventDefault();
+ document.querySelectorAll('.faq-card.open').forEach(c => c.classList.remove('open'));
+ target.classList.add('open');
+ setTimeout(() => {
+ target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+ }, 50);
+  });
+});
+
+/* ── Sistema de Resplandor y Botón Regresar ── */
+let lastScrollPos = 0;
+let currentHighlighted = null;
+const btnBack = document.getElementById('btnBack');
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('mousedown', function() {
+ lastScrollPos = window.scrollY;
+  });
+  link.addEventListener('click', function(e) {
+ const targetId = this.getAttribute('href').slice(1);
+ if (!targetId || targetId === 'hero') return;
+ 
+ setTimeout(() => {
+ btnBack.classList.add('visible');
+ const target = document.getElementById(targetId);
+ if (target) {
+ if (currentHighlighted) currentHighlighted.classList.remove('highlight-glow');
+ void target.offsetWidth;
+ target.classList.add('highlight-glow');
+ currentHighlighted = target;
+ setTimeout(() => {
+ target.classList.remove('highlight-glow');
+ if (currentHighlighted === target) currentHighlighted = null;
+ }, 2500);
+ }
+ }, 50);
+  });
+});
+
+btnBack.addEventListener('click', () => {
+  window.scrollTo({ top: lastScrollPos, behavior: 'smooth' });
+  btnBack.classList.remove('visible');
+  if (currentHighlighted) {
+ currentHighlighted.classList.remove('highlight-glow');
+ currentHighlighted = null;
+  }
+});
+</script>
+</body>
+</html>
